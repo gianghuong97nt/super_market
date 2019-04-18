@@ -7,35 +7,35 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{asset('layout/css/bootstrap.css')}}" rel='stylesheet' type='text/css' />
+    <link href="{{asset('asset/css/bootstrap.css')}}" rel='stylesheet' type='text/css' />
 
     <!-- Custom CSS -->
-    <link href="{{asset('layout/css/style.css')}}" rel='stylesheet' type='text/css' />
+    <link href="{{asset('asset/css/style.css')}}" rel='stylesheet' type='text/css' />
 
     <!-- font-awesome icons CSS -->
-    <link href="{{asset('layout/css/font-awesome.css')}}" rel="stylesheet">
+    <link href="{{asset('asset/css/font-awesome.css')}}" rel="stylesheet">
     <!-- //font-awesome icons CSS-->
 
     <!-- side nav css file -->
-    <link href='{{asset('layout/css/SidebarNav.min.css')}}' media='all' rel='stylesheet' type='text/css'/>
+    <link href='{{asset('asset/css/SidebarNav.min.css')}}' media='all' rel='stylesheet' type='text/css'/>
     <!-- //side nav css file -->
 
     <!-- js-->
-    <script src="{{asset('layout/js/jquery-1.11.1.min.js')}}"></script>
-    <script src="{{asset('layout/js/modernizr.custom.js')}}"></script>
+    <script src="{{asset('asset/js/jquery-1.11.1.min.js')}}"></script>
+    <script src="{{asset('asset/js/modernizr.custom.js')}}"></script>
 
     <!--webfonts-->
     <link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
     <!--//webfonts-->
 
     <!-- chart -->
-    <script src="{{asset('layout/js/Chart.js')}}"></script>
+    <script src="{{asset('asset/js/Chart.js')}}"></script>
     <!-- //chart -->
 
     <!-- Metis Menu -->
-    <script src="{{asset('layout/js/metisMenu.min.js')}}"></script>
-    <script src="{{asset('layout/js/custom.js')}}"></script>
-    <link href="{{asset('layout/css/custom.css')}}" rel="stylesheet">
+    <script src="{{asset('asset/js/metisMenu.min.js')}}"></script>
+    <script src="{{asset('asset/js/custom.js')}}"></script>
+    <link href="{{asset('asset/css/custom.css')}}" rel="stylesheet">
     <!--//Metis Menu -->
     <style>
         #chartdiv {
@@ -44,7 +44,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
         }
     </style>
     <!--pie-chart --><!-- index page sales reviews visitors pie chart -->
-    <script src="{{asset('layout/js/pie-chart.js')}}" type="text/javascript"></script>
+    <script src="{{asset('asset/js/pie-chart.js')}}" type="text/javascript"></script>
     <script type="text/javascript">
 
         $(document).ready(function () {
@@ -85,8 +85,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <!-- //pie-chart --><!-- index page sales reviews visitors pie chart -->
 
     <!-- requried-jsfiles-for owl -->
-    <link href="{{asset('asset')}}" rel="stylesheet">
-    <script src="{{asset('layout/js/owl.carousel.js')}}"></script>
+    <link href="{{asset('asset/css/owl.carousel.css')}}" rel="stylesheet">
+    <script src="{{asset('asset/js/owl.carousel.js')}}"></script>
     <script>
         $(document).ready(function() {
             $("#owl-demo").owlCarousel({

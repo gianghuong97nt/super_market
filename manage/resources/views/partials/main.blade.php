@@ -1,5 +1,5 @@
-<script src="{{asset('asset')}}"></script>
-<script src="{{asset('js/utils.js')}}"></script>
+<script src="{{asset('asset/js/Chart.bundle.js')}}"></script>
+<script src="{{asset('asset/js/utils.js')}}"></script>
 
 <script>
     var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -57,70 +57,85 @@
 
     };
 
-    document.getElementById('randomizeData').addEventListener('click', function() {
-        var zero = Math.random() < 0.2 ? true : false;
-        barChartData.datasets.forEach(function(dataset) {
-            dataset.data = dataset.data.map(function() {
-                return zero ? 0.0 : randomScalingFactor();
-            });
+    window.onload=function(){
+        document.getElementById('randomizeData').addEventListener('click', function() {
+            var zero = Math.random() < 0.2 ? true : false;
+            barChartData.datasets.forEach(function(dataset) {
+                dataset.data = dataset.data.map(function() {
+                    return zero ? 0.0 : randomScalingFactor();
+                });
 
+            });
+            window.myBar.update();
         });
-        window.myBar.update();
-    });
+    }
+
 
     var colorNames = Object.keys(window.chartColors);
-    document.getElementById('addDataset').addEventListener('click', function() {
-        var colorName = colorNames[barChartData.datasets.length % colorNames.length];;
-        var dsColor = window.chartColors[colorName];
-        var newDataset = {
-            label: 'Dataset ' + barChartData.datasets.length,
-            backgroundColor: color(dsColor).alpha(0.5).rgbString(),
-            borderColor: dsColor,
-            borderWidth: 1,
-            data: []
-        };
+    window.onload=function(){
+        document.getElementById('addDataset').addEventListener('click', function() {
+            var colorName = colorNames[barChartData.datasets.length % colorNames.length];;
+            var dsColor = window.chartColors[colorName];
+            var newDataset = {
+                label: 'Dataset ' + barChartData.datasets.length,
+                backgroundColor: color(dsColor).alpha(0.5).rgbString(),
+                borderColor: dsColor,
+                borderWidth: 1,
+                data: []
+            };
 
-        for (var index = 0; index < barChartData.labels.length; ++index) {
-            newDataset.data.push(randomScalingFactor());
-        }
-
-        barChartData.datasets.push(newDataset);
-        window.myBar.update();
-    });
-
-    document.getElementById('addData').addEventListener('click', function() {
-        if (barChartData.datasets.length > 0) {
-            var month = MONTHS[barChartData.labels.length % MONTHS.length];
-            barChartData.labels.push(month);
-
-            for (var index = 0; index < barChartData.datasets.length; ++index) {
-                //window.myBar.addData(randomScalingFactor(), index);
-                barChartData.datasets[index].data.push(randomScalingFactor());
+            for (var index = 0; index < barChartData.labels.length; ++index) {
+                newDataset.data.push(randomScalingFactor());
             }
 
+            barChartData.datasets.push(newDataset);
             window.myBar.update();
-        }
-    });
-
-    document.getElementById('removeDataset').addEventListener('click', function() {
-        barChartData.datasets.splice(0, 1);
-        window.myBar.update();
-    });
-
-    document.getElementById('removeData').addEventListener('click', function() {
-        barChartData.labels.splice(-1, 1); // remove the label first
-
-        barChartData.datasets.forEach(function(dataset, datasetIndex) {
-            dataset.data.pop();
         });
+    }
 
-        window.myBar.update();
-    });
+
+    window.onload=function(){
+        document.getElementById('addData').addEventListener('click', function() {
+            if (barChartData.datasets.length > 0) {
+                var month = MONTHS[barChartData.labels.length % MONTHS.length];
+                barChartData.labels.push(month);
+
+                for (var index = 0; index < barChartData.datasets.length; ++index) {
+                    //window.myBar.addData(randomScalingFactor(), index);
+                    barChartData.datasets[index].data.push(randomScalingFactor());
+                }
+
+                window.myBar.update();
+            }
+        });
+    }
+
+
+    window.onload=function(){
+        document.getElementById('removeDataset').addEventListener('click', function() {
+            barChartData.datasets.splice(0, 1);
+            window.myBar.update();
+        });
+    }
+
+
+    window.onload=function(){
+        document.getElementById('removeData').addEventListener('click', function() {
+            barChartData.labels.splice(-1, 1); // remove the label first
+
+            barChartData.datasets.forEach(function(dataset, datasetIndex) {
+                dataset.data.pop();
+            });
+
+            window.myBar.update();
+        });
+    }
+
 </script>
 <!-- new added graphs chart js-->
 
 <!-- Classie --><!-- for toggle left push menu script -->
-<script src="{{asset('asset')}}"></script>
+<script src="{{asset('asset/js/classie.js')}}"></script>
 <script>
     var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
         showLeftPush = document.getElementById( 'showLeftPush' ),
@@ -143,19 +158,19 @@
 <!-- //Classie --><!-- //for toggle left push menu script -->
 
 <!--scrolling js-->
-<script src="{{asset('layout/js/jquery.nicescroll.js')}}"></script>
-<script src="{{asset('layout/js/scripts.js')}}"></script>
+<script src="{{asset('asset/js/jquery.nicescroll.js')}}"></script>
+<script src="{{asset('asset/js/scripts.js')}}"></script>
 <!--//scrolling js-->
 
 <!-- side nav js -->
-<script src='{{asset('asset')}}' type='text/javascript'></script>
+<script src='{{asset('asset/js/SidebarNav.min.js')}}' type='text/javascript'></script>
 <script>
     $('.sidebar-menu').SidebarNav()
 </script>
 <!-- //side nav js -->
 
 <!-- for index page weekly sales java script -->
-<script src="{{asset('layout/js/SimpleChart.js')}}"></script>
+<script src="{{asset('asset/js/SimpleChart.js')}}"></script>
 <script>
     var graphdata1 = {
         linecolor: "#CCA300",
@@ -413,5 +428,5 @@
 
 
 <!-- Bootstrap Core JavaScript -->
-<script src="{{asset('layout/js/bootstrap.js')}}"> </script>
+<script src="{{asset('asset/js/bootstrap.js')}}"> </script>
 <!-- //Bootstrap Core JavaScript -->

@@ -14,7 +14,7 @@
                             </div>
                         </li>
                         <li><a href="#">
-                                <div class="user_img"><img src="images/1.jpg" alt=""></div>
+                                <div class="user_img"><img src="{{asset('asset/images/1.jpg')}}" alt=""></div>
                                 <div class="notification_desc">
                                     <p>Lorem ipsum dolor amet</p>
                                     <p><span>1 hour ago</span></p>
@@ -22,7 +22,7 @@
                                 <div class="clearfix"></div>
                             </a></li>
                         <li class="odd"><a href="#">
-                                <div class="user_img"><img src="images/4.jpg" alt=""></div>
+                                <div class="user_img"><img src="{{asset('asset/images/4.jpg')}}" alt=""></div>
                                 <div class="notification_desc">
                                     <p>Lorem ipsum dolor amet </p>
                                     <p><span>1 hour ago</span></p>
@@ -30,7 +30,7 @@
                                 <div class="clearfix"></div>
                             </a></li>
                         <li><a href="#">
-                                <div class="user_img"><img src="images/3.jpg" alt=""></div>
+                                <div class="user_img"><img src="{{asset('asset/images/3.jpg')}}" alt=""></div>
                                 <div class="notification_desc">
                                     <p>Lorem ipsum dolor amet </p>
                                     <p><span>1 hour ago</span></p>
@@ -38,7 +38,7 @@
                                 <div class="clearfix"></div>
                             </a></li>
                         <li><a href="#">
-                                <div class="user_img"><img src="images/2.jpg" alt=""></div>
+                                <div class="user_img"><img src="{{asset('asset/images/2.jpg')}}" alt=""></div>
                                 <div class="notification_desc">
                                     <p>Lorem ipsum dolor amet </p>
                                     <p><span>1 hour ago</span></p>
@@ -61,7 +61,7 @@
                             </div>
                         </li>
                         <li><a href="#">
-                                <div class="user_img"><img src="images/4.jpg" alt=""></div>
+                                <div class="user_img"><img src="{{asset('asset/images/4.jpg')}}" alt=""></div>
                                 <div class="notification_desc">
                                     <p>Lorem ipsum dolor amet</p>
                                     <p><span>1 hour ago</span></p>
@@ -69,7 +69,7 @@
                                 <div class="clearfix"></div>
                             </a></li>
                         <li class="odd"><a href="#">
-                                <div class="user_img"><img src="images/1.jpg" alt=""></div>
+                                <div class="user_img"><img src="{{asset('asset/images/1.jpg')}}" alt=""></div>
                                 <div class="notification_desc">
                                     <p>Lorem ipsum dolor amet </p>
                                     <p><span>1 hour ago</span></p>
@@ -77,7 +77,7 @@
                                 <div class="clearfix"></div>
                             </a></li>
                         <li><a href="#">
-                                <div class="user_img"><img src="images/3.jpg" alt=""></div>
+                                <div class="user_img"><img src="{{asset('asset/images/3.jpg')}}" alt=""></div>
                                 <div class="notification_desc">
                                     <p>Lorem ipsum dolor amet </p>
                                     <p><span>1 hour ago</span></p>
@@ -85,7 +85,7 @@
                                 <div class="clearfix"></div>
                             </a></li>
                         <li><a href="#">
-                                <div class="user_img"><img src="images/2.jpg" alt=""></div>
+                                <div class="user_img"><img src="{{asset('asset/images/2.jpg')}}" alt=""></div>
                                 <div class="notification_desc">
                                     <p>Lorem ipsum dolor amet </p>
                                     <p><span>1 hour ago</span></p>
@@ -176,7 +176,7 @@
                 <li class="dropdown profile_details_drop">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                         <div class="profile_img">
-                            <span class="prfil-img"><img src="images/2.jpg" alt=""> </span>
+                            <span class="prfil-img"><img src="{{asset('asset/images/2.jpg')}}" alt=""> </span>
                             <div class="user-name">
                                 <p>Admin Name</p>
                                 <span>Administrator</span>
