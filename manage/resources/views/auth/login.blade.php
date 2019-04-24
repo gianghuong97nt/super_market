@@ -10,14 +10,10 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons'>
 
     <link rel="stylesheet" href="{{asset('login/css/style.css')}}">
-
-
 </head>
 
 <body>
 
-
-<!-- Form-->
 <div class="form">
     <div class="form-toggle"></div>
     <div class="form-panel one">
@@ -45,40 +41,11 @@
             </form>
         </div>
     </div>
-    <div class="form-panel two">
-        <div class="form-header">
-            <h1>Sign up</h1>
-        </div>
-        <div class="form-content">
-            <form>
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username2" name="username" required="required"/>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password2" name="password" required="required"/>
-                </div>
-                <div class="form-group">
-                    <label for="cpassword">Confirm Password</label>
-                    <input type="password" id="cpassword" name="cpassword" required="required"/>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required="required"/>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Sign up</button>
-                </div>
-            </form>
-        </div>
-    </div>
 </div>
-<div class="pen-footer"><a href="https://www.behance.net/gallery/30478397/Login-Form-UI-Library" target="_blank"><i class="material-icons">arrow_backward</i>View on Behance</a><a href="https://github.com/andyhqtran/UI-Library/tree/master/Login%20Form" target="_blank">View on Github<i class="material-icons">arrow_forward</i></a></div>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+{{--<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>--}}
 
 
-<script  src="{{asset('login/js/index.js')}}"></script>
+{{--<script  src="{{asset('login/js/index.js')}}"></script>--}}
 
 </body>
 

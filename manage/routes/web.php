@@ -12,8 +12,35 @@
 */
 
 Route::get('/', function () {
-    return view('glance');
+    return view('layouts/glance');
 });
 
-// Route cho phần login
-Route::get('/login', 'LoginController@login')->name('login');
+
+Route::get('/login', function () {
+    return view('auth/login');
+});
+
+
+// Route cho phần đổi chức năng thông tin người dùng
+
+Route::get('/personalInfo', function (){
+   return view('personalInfo/info');
+});
+
+Route::get('/product', function (){
+    return view('product/index');
+});
+
+
+
+/**
+ * --------------------------Route cho phần login, logout---------------------------------------
+ */
+
+//Route login
+
+//Route::get('/login', 'LoginController@login')->name('login');
+
+// Route logout
+
+Route::get('/logout', 'LoginController@logout')->name('logout');

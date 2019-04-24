@@ -1,4 +1,4 @@
-<head>
+
     <title>Manage Super Market</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -17,7 +17,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <!-- //font-awesome icons CSS-->
 
     <!-- side nav css file -->
-    <link href='{{asset('asset/css/SidebarNav.min.css')}}' media='all' rel='stylesheet' type='text/css'/>
+    <link href="{{asset('asset/css/SidebarNav.min.css')}}" rel='stylesheet' type='text/css'/>
     <!-- //side nav css file -->
 
     <!-- js-->
@@ -99,4 +99,3 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
         });
     </script>
     <!-- //requried-jsfiles-for owl -->
-</head>

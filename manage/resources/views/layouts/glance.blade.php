@@ -6,7 +6,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
 <html>
-@include('partials.head')
+<head>
+    @include('partials.head')
+    @yield('link')
+</head>
+
 <body class="cbp-spmenu-push">
 <div class="main-content">
 @include('partials.sidebar')
@@ -29,6 +33,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- new added graphs chart js-->
 
 @include('partials.main')
+@yield('tag')
 
 </body>
 </html>

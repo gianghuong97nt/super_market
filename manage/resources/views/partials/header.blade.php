@@ -176,7 +176,7 @@
                 <li class="dropdown profile_details_drop">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                         <div class="profile_img">
-                            <span class="prfil-img"><img src="{{asset('asset/images/2.jpg')}}" alt=""> </span>
+                            <span class="prfil-img"><img src="{{asset('asset/images/2.jpg')}} " alt=""> </span>
                             <div class="user-name">
                                 <p>Admin Name</p>
                                 <span>Administrator</span>
@@ -189,7 +189,7 @@
                     <ul class="dropdown-menu drp-mnu">
                         <li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>
                         <li> <a href="#"><i class="fa fa-user"></i> My Account</a> </li>
-                        <li> <a href="#"><i class="fa fa-suitcase"></i> Profile</a> </li>
+                        <li> <a href="{{'/personalInfo'}}"><i class="fa fa-suitcase"></i> Personal Imformation</a> </li>
                         <li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
                     </ul>
                 </li>
