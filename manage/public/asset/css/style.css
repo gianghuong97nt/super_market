@@ -1440,7 +1440,7 @@ section#tables  p {
     padding: 2em 2em 0.5em;
 }
 .tables .table > thead > tr > th, .tables .table > tbody > tr > th, .tables .table > tfoot > tr > th, .tables .table > thead > tr > td, .tables .table > tbody > tr > td, .tables .table > tfoot > tr > td {
-    padding: 13px;
+    /*padding: 13px;*/
 	border-top: 1px solid #E0E0E0;
 }
 .bs-example {
@@ -5105,6 +5105,7 @@ figure.icons,.weather-text {
 }
 .table>thead>tr>th {
     border-bottom: 1px solid #e1ab91 ! important;
+    text-align: center;
 }
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
     border-bottom: 1px solid #e9e9e9 ! important;
