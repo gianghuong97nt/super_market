@@ -1,0 +1,53 @@
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+
+}
+.product th {
+    line-height: 2;
+}
+.id {
+    width: 5%;
+    text-align: right;
+}
+.quantity {
+    width: 5%;
+    text-align: right;
+}
+.color {
+    width: 5%;
+}
+.size {
+    width: 5%;
+    text-align: left;
+}
+.price_core {
+    width: 7%;
+    text-align: right;
+}
+.price_sale {
+    width: 7%;
+    text-align: right;
+}
+.note {
+    width: 10%;
+}
+.brand {
+    width: 10%;
+}
+.action {
+    width: 7%;
+    text-align: center;
+}
+.supplier {
+    width: 10%;
+}
+.product_name{
+    width: 10%;
+}
+.category {
+    width: 10%;
+}
