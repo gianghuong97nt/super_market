@@ -28,9 +28,18 @@ Route::get('/personalInfo', function (){
 });
 
 Route::get('/product', function (){
-    return view('product/index');
+    return view('product/index')-> with('paging',2);
 });
 
+// chi tiết sản phẩm
+Route::get('/product/detail', function (){
+    return view('product/detail');
+});
+
+// Sửa sản phẩm
+Route::get('/product/edit', function (){
+    return view('product/edit');
+});
 
 
 /**
