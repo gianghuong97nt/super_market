@@ -1,0 +1,171 @@
+.label-info {
+    background: #629aa9;
+    color: white;
+    width: 100%;
+    text-align: left;
+    line-height: 1;
+    border: 1px solid #629aa9;
+    font-size: 16px;
+}
+
+.row {
+    margin-bottom: 5px;
+
+}
+.row input {
+    margin-left: -20px;
+    font-size: 16px;
+}
+
+.row img {
+    margin-left: -20px;
+    height: 30%;
+    width: 30%;
+}
+.row select {
+    margin-left: -20px;
+    font-size: 16px;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.btn-btn {
+    float: right;
+    /*margin-bottom: -25px;*/
+    /*//margin-right: -80px;*/
+}
+.btn-2 {
+    width: 70px;
+}
+
+#userID{
+    width: 70px;
+}
+#username {
+    width: 300px;
+}
+#email {
+    width: 300px;
+}
+#phone {
+    width: 120px;
+}
+#birthday {
+    width: 160px;
+}
+
+#password {
+    width: 160px;
+}
+#repassword {
+    width: 160px;
+}
+
+#address {
+    width: 350px;
+}
+#gender {
+    width: 100px;
+}
+#avatar {
+    width: 50%;
+    height: 50%;
+}
+@media only screen and (max-width: 320px) {
+    .label-info {
+        margin-left: -20px;
+        margin-bottom: 3px;
+        max-width: 160px;
+        width: 160px;
+    }
+    .row input {
+        font-size: 13px;
+    }
+    .row select {
+        font-size: 13px;
+    }
+    .btn-2 {
+        font-size: 13px;
+        width: 48%;
+    }
+    #username {
+        width: 200px;
+    }
+    #email {
+        width: 200px;
+    }
+    #address {
+        width: 200px;
+    }
+
+}
+
+@media only screen and (min-width: 321px) and (max-width: 767px) {
+    .label-info {
+        margin-left: -20px;
+        margin-bottom: 3px;
+        max-width: 160px;
+        width: 160px;
+    }
+    .btn-2 {
+        width: 60px;
+    }
+    .row input {
+        font-size: 15px;
+    }
+    .row select {
+        font-size: 15px;
+    }
+    .btn-2 {
+        font-size: 14px;
+    }
+    #username {
+        min-width: 200px;
+        max-width: 200px;
+    }
+    #email {
+        width: 200px;
+    }
+    #address {
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .row input {
+        font-size: 16px;
+    }
+    .row select {
+        font-size: 16px;
+    }
+    .btn-2 {
+        font-size: 16px;
+        /*margin-right: -60px;*/
+        margin-bottom: -25px;
+    }
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .row input {
+        font-size: 16px;
+    }
+    .row select {
+        font-size: 16px;
+    }
+    .btn-2 {
+        font-size: 16px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    .label-info {
+        min-width: 165px;
+    }
+
+}
+
+
