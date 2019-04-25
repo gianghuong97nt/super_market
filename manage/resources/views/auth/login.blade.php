@@ -5,10 +5,6 @@
     <meta charset="UTF-8">
     <title>Login</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons'>
-
     <link rel="stylesheet" href="{{asset('login/css/style.css')}}">
 </head>
 
@@ -42,10 +38,6 @@
         </div>
     </div>
 </div>
-{{--<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>--}}
-
-
-{{--<script  src="{{asset('login/js/index.js')}}"></script>--}}
 
 </body>
 
