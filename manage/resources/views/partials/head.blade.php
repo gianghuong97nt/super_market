@@ -1,5 +1,6 @@
 
     <title>Manage Super Market</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Glance Design Dashboard Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
@@ -36,6 +37,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <script src="{{asset('asset/js/metisMenu.min.js')}}"></script>
     <script src="{{asset('asset/js/custom.js')}}"></script>
     <link href="{{asset('asset/css/custom.css')}}" rel="stylesheet">
+    <!-- chart -->
+    <script src="{{ asset('js/common.js') }}"></script>
+    <!-- //chart -->
     <!--//Metis Menu -->
     <style>
         #chartdiv {

@@ -6,17 +6,20 @@
 @section('content')
     <div class="forms tables">
         <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 btn-btn">
-                <h2 class="title1">Personal Information</h2>
+            <div class="d-inline">
+                <h2 class="title1">Thông tin cá nhân</h2>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 btn-btn d-inline">
                 <button type="button" class="btn btn-success btn-2">Save</button>
-                <a href="{{'http://localhost:8005'}}"><button type="button" class="btn btn-success btn-2">Back</button></a>
+                <a href="{{'http://localhost:8005'}}"><button type="button" class="btn btn-success btn-2 btn-back">Back</button></a>
             </div>
         </div>
-        <div class="panel-body bs-example widget-shadow" data-example-id="basic-forms">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="form-grids row widget-shadow">
+            {{--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">--}}
+            <div>
                 <div class="form-body">
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
                             <label class="form-control label-info" >User ID</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -24,7 +27,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
                             <label class="form-control label-info">Tên</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -32,7 +35,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
                             <label class="form-control label-info">Email</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -40,7 +43,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
                             <label class="form-control label-info">SĐT</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -48,7 +51,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
                             <label class="form-control label-info">Ngày sinh</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -56,7 +59,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
                             <label class="form-control label-info">Mật khẩu</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -64,7 +67,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
                             <label class="form-control label-info">Xác nhận MK</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -72,7 +75,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
                             <label class="form-control label-info">Địa chỉ</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -80,7 +83,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
                             <label class="form-control label-info">Giới tính</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -91,7 +94,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
                             <label class="form-control label-info">Ảnh</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">

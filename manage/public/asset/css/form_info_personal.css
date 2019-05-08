@@ -6,24 +6,38 @@
     line-height: 1;
     border: 1px solid #629aa9;
     font-size: 16px;
+    margin-left: -15px;
 }
+
+.form-body {
+    padding: 2em 2em;
+}
+
+.widget-shadow {
+    margin-top: -18px;
+}
+
+.d-inline {
+    display: inline-block;
+}
+
 
 .row {
     margin-bottom: 5px;
 
 }
 .row input {
-    margin-left: -20px;
+    margin-left: -40px;
     font-size: 16px;
 }
 
 .row img {
-    margin-left: -20px;
+    margin-left: -40px;
     height: 30%;
     width: 30%;
 }
 .row select {
-    margin-left: -20px;
+    margin-left: -40px;
     font-size: 16px;
 }
 
@@ -33,11 +47,9 @@
 
 .btn-btn {
     float: right;
-    /*margin-bottom: -25px;*/
-    /*//margin-right: -80px;*/
 }
 .btn-2 {
-    width: 70px;
+    width: 48%;
 }
 
 #userID{

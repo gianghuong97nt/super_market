@@ -5,20 +5,34 @@
     text-align: left;
     line-height: 1;
     border: 1px solid #629aa9;
+    margin-left: -15px;
+}
+.bs-example {
+    margin-top: -18px;
+}
+
+.d-inline {
+    display: inline-block;
+}
+.form-body {
+    padding: 2em 2em;
 }
 
 .row {
     margin-bottom: 5px;
 }
 .row input {
-    margin-left: -20px;
+    margin-left: -40px;
 }
 
 .row img {
-    margin-left: -20px;
+    margin-left: -40px;
 }
 .row select {
-    margin-left: -20px;
+    margin-left: -40px;
+    height: 34px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 .form-control {
     border-radius: 5px;
@@ -26,17 +40,20 @@
 }
 
 .condition {
-    font-size: 30px;
+    font-size: 20px;
+    padding-left: 13px;
+    border-bottom: 1px ;
+    background: #4CAF50;
+    color: white;
+    line-height: 2;
+    height: 40px;
 }
-
-.widget-shadow {
-    margin-bottom: 30px;
+.form-grids {
+    margin-bottom: 40px;
 }
 
 .btn-btn {
     float: right;
-    margin-bottom: -25px;
-
 }
 .btn-2 {
     width: 48%;
@@ -49,7 +66,7 @@
     width: 70%;
 }
 #category {
-    width: 70%;
+    width: 50%;
 }
 #supplier {
     width: 70%;
@@ -65,19 +82,26 @@
     width: 50%;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width: 480px){
     .label-info {
-        margin-left: -20px;
         margin-bottom: 3px;
     }
     .row input {
         font-size: 13px;
+
     }
     .row select {
         font-size: 13px;
     }
     .btn-2 {
-        font-size: 13px;
+        font-size: 11px;
+        text-align: center;
+        width: 60px;
+        float: right;
+    }
+
+    .btn-back {
+        margin-right: 5px;
     }
     #product_id {
         width: 40%;
@@ -107,7 +131,7 @@
     }
 }
 
-@media only screen and (min-width: 321px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
     .label-info {
         margin-left: -20px;
         margin-bottom: 3px;
@@ -120,6 +144,8 @@
     }
     .btn-2 {
         font-size: 14px;
+        width: 70px;
+        min-width: 70px;
     }
     #product_id {
         width: 40%;
@@ -180,6 +206,7 @@
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+
     .row input {
         font-size: 16px;
     }

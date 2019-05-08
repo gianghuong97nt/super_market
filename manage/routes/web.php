@@ -13,12 +13,13 @@
 
 Route::get('/', function () {
     return view('layouts/glance');
-});
+})->name('home');
 
 
-Route::get('/login', function () {
-    return view('auth/login');
-});
+//Route::get('/login', function () {
+//    return view('auth/login');
+//});
+
 
 
 // Route cho phần đổi chức năng thông tin người dùng
@@ -48,7 +49,10 @@ Route::get('/product/edit', function (){
 
 //Route login
 
-//Route::get('/login', 'LoginController@login')->name('login');
+Route::get('/login', 'LoginController@login')->name('login');
+
+//Check login
+Route::post('/checkLogin', 'LoginController@checkLogin')->name('checkLogin');
 
 // Route logout
 

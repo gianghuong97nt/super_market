@@ -1,4 +1,6 @@
-
+.tbl_product {
+    min-width: 715px;
+}
 tr:nth-child(even){background-color: #f2f2f2}
 
 th {
@@ -6,48 +8,53 @@ th {
     color: white;
 
 }
+.product {
+    height: 40px;
+}
 .product th {
     line-height: 2;
+    font-weight: 400;
 }
 .id {
-    width: 5%;
+    width: 15px;
     text-align: right;
 }
 .quantity {
-    width: 5%;
+    width: 20px;
     text-align: right;
 }
 .color {
-    width: 5%;
+    width: 20px;
 }
 .size {
-    width: 5%;
+    width: 20px;
     text-align: left;
 }
 .price_core {
-    width: 7%;
+    width: 30px;
     text-align: right;
 }
 .price_sale {
-    width: 7%;
+    width: 30px;
     text-align: right;
 }
 .note {
-    width: 10%;
+    width: 100px;
 }
 .brand {
-    width: 10%;
+    width: 100px;
 }
 .action {
-    width: 7%;
+    width: 100px;
     text-align: center;
+    min-width: 100px;
 }
 .supplier {
-    width: 10%;
+    width: 100px;
 }
 .product_name{
-    width: 10%;
+    width: 100px;
 }
 .category {
-    width: 10%;
+    width: 100px;
 }
