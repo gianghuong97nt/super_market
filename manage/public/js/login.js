@@ -35,18 +35,14 @@ function login() {
                 switch (res['status']) {
                     // Success
                     case '200':
-                        alert("Thanh cong");
+                        alert("Login thanh cong");
                         window.location.href = "/";
                         break;
                     // Data Validate
-                    case '201':
+                    case 'NG':
                         alert("Loi 201");
+                        break;
 
-                        break;
-                    // SQL + PHP Exception
-                    case '202':
-                        alert("Loi 202");
-                        break;
                     default:
                         break;
                 }

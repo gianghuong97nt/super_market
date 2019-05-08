@@ -15,22 +15,9 @@ Route::get('/', function () {
     return view('layouts/glance');
 })->name('home');
 
-
-//Route::get('/login', function () {
-//    return view('auth/login');
+//Route::get('/product', function (){
+//    return view('product/index')-> with('paging',2);
 //});
-
-
-
-// Route cho phần đổi chức năng thông tin người dùng
-
-Route::get('/personalInfo', function (){
-   return view('personalInfo/info');
-});
-
-Route::get('/product', function (){
-    return view('product/index')-> with('paging',2);
-});
 
 // chi tiết sản phẩm
 Route::get('/product/detail', function (){
@@ -44,7 +31,7 @@ Route::get('/product/edit', function (){
 
 
 /**
- * --------------------------Route cho phần login, logout---------------------------------------
+ * --------------------------Route cho phan login, logout---------------------------------------
  */
 
 //Route login
@@ -57,3 +44,30 @@ Route::post('/checkLogin', 'LoginController@checkLogin')->name('checkLogin');
 // Route logout
 
 Route::get('/logout', 'LoginController@logout')->name('logout');
+
+
+
+/**
+ * ---------------------------------------------------------------------------------------------
+ * --------------------------Route cho thong tin ca nhan ---------------------------------------
+ * ---------------------------------------------------------------------------------------------
+ */
+// Route thong tin ca nhan
+Route::get('/personalInfo', 'UserController@personalInfo')->name('personalInfo');
+
+
+//Route update thong tin ca nhan
+Route::post('/updatePersonalInfo', 'UserController@updatePersonalInfo')->name('updatePersonalInfo');
+
+
+/**
+ * ---------------------------------------------------------------------------------------------
+ * --------------------------Route cho san pham ---------------------------------------
+ * ---------------------------------------------------------------------------------------------
+ */
+
+// Route san pham
+Route::get('/product', 'ProductController@index')->name('product');
+
+// Route tim kiem san pham
+Route::post('/product/search', 'ProductController@search')->name('product.search');

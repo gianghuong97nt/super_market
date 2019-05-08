@@ -8,8 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
-    //
-    //
+
     public function login(){
         return view('auth.login');
     }
@@ -28,7 +27,6 @@ class LoginController extends Controller
 
         $params = $request->all();
 
-
         $get_user = Dao::call_stored_procedure('[SPC_USERS_ACT01]',$params);
 
 //        var_dump( $get_user[1]);
@@ -39,11 +37,10 @@ class LoginController extends Controller
             'users'=>$get_user[1][0]['user_name'],
         ]);
 
-        $result = [
-            'status' => '200'
-        ];
+//        $result = [
+//            'status' => '200'
+//        ];
 
-//        session_start();
         if((isset($get_user[0][0]['result'])?$get_user[0][0]['result']:'') == 'ok'){
 
             $result = [
@@ -59,7 +56,13 @@ class LoginController extends Controller
         return response()->json($result);
     }
 
-    public function logout(){
-
+    /**
+     * Phương thức đăng xuất
+     * Xóa hết các session trong phiên làm việc hiện tại
+     * Redirect login
+     */
+    public function logout(Request $request){
+        $request->session()->flush();
+        return redirect()->route('login');
     }
 }

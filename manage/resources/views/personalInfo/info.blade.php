@@ -3,6 +3,9 @@
 @section('link')
     <link href="{{asset('asset/css/form_info_personal.css')}}" rel='stylesheet' type='text/css' />
 @endsection
+@section('tag')
+    <script src="{{ asset('js/personalInfo.js') }}"></script>
+@endsection
 @section('content')
     <div class="forms tables">
         <div class="row">
@@ -10,7 +13,7 @@
                 <h2 class="title1">Thông tin cá nhân</h2>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 btn-btn d-inline">
-                <button type="button" class="btn btn-success btn-2">Save</button>
+                <button type="button" class="btn btn-success btn-2" id="save_info">Save</button>
                 <a href="{{'http://localhost:8005'}}"><button type="button" class="btn btn-success btn-2 btn-back">Back</button></a>
             </div>
         </div>
@@ -23,7 +26,7 @@
                             <label class="form-control label-info" >User ID</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="userID" disabled value="{{'112'}}"/>
+                            <input type="text" class="form-control" id="userID" disabled value="{{$user[0]['user_id']}}"/>
                         </div>
                     </div>
                     <div class="row">
@@ -31,7 +34,7 @@
                             <label class="form-control label-info">Tên</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="username" value="{{'Giang'}}"/>
+                            <input type="text" class="form-control" id="userName" value="{{$user[0]['user_name']}}"/>
                         </div>
                     </div>
                     <div class="row">
@@ -39,7 +42,7 @@
                             <label class="form-control label-info">Email</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="email" value="{{'giang@gmail.com'}}"/>
+                            <input type="text" class="form-control" id="email" value="{{$user[0]['email']}}"/>
                         </div>
                     </div>
                     <div class="row">
@@ -47,7 +50,7 @@
                             <label class="form-control label-info">SĐT</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="phone" value="{{'0969344759'}}"/>
+                            <input type="text" class="form-control" id="phone" value="{{$user[0]['phone']}}"/>
                         </div>
                     </div>
                     <div class="row">
@@ -55,7 +58,7 @@
                             <label class="form-control label-info">Ngày sinh</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="date" class="form-control" id="birthday" value="{{'04/14/1997'}}"/>
+                            <input type="date" class="form-control" id="birthday" value="{{$user[0]['birthday']}}"/>
                         </div>
                     </div>
                     <div class="row">
@@ -63,7 +66,7 @@
                             <label class="form-control label-info">Mật khẩu</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="password" class="form-control" id="password" placeholder="Password"/>
+                            <input type="password" class="form-control" id="passwordInfo" value="{{$user[0]['password']}}"/>
                         </div>
                     </div>
                     <div class="row">
@@ -79,7 +82,7 @@
                             <label class="form-control label-info">Địa chỉ</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="address" value="{{'Thái Bình'}}"/>
+                            <input type="text" class="form-control" id="address" value="{{$user[0]['address']}}"/>
                         </div>
                     </div>
                     <div class="row">
@@ -88,8 +91,8 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <select class="form-control" id="gender">
-                                <option>Male</option>
-                                <option>Female</option>
+                                <option {{$user[0]['gender']==0?'selected':''}} value="0">Male</option>
+                                <option {{$user[0]['gender']==1?'selected':''}} value="1">Female</option>
                             </select>
                         </div>
                     </div>
