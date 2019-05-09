@@ -9,6 +9,7 @@ class ProductController extends Controller
 {
     //
     public function index(){
+
         try {
             $data  = Dao::call_stored_procedure('SPC_PRODUCT_INQ01');
             return view('product.index')
@@ -144,7 +145,7 @@ class ProductController extends Controller
         try {
             $param = $request->all();
 
-            $data = Dao::call_stored_procedure('SPC_PRODUCT_ACT1', $param);
+            $data = Dao::call_stored_procedure('SPC_PRODUCT_ACT3', $param);
 
             if ($data[0][0]['Data'] == 'Exception' || $data[0][0]['Data'] == 'EXCEPTION') { //SQL Exception
                 $result = array(

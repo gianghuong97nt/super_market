@@ -12,7 +12,7 @@
             <th>Giá nhập</th>
             <th>Giá bán</th>
             <th>Note</th>
-            <th class="action"><a class="btn btn-primary" id="btn-add-row-1" href="{{'http://localhost:8005/product/detail'}}"><i class="fa fa-plus" aria-hidden="true"></i></a></th>
+            <th class="action"><a class="btn btn-primary" id="btn-add-row-1" href="{{url('/product/detail')}}"><i class="fa fa-plus" aria-hidden="true"></i></a></th>
         </tr>
     </thead>
     <tbody>
@@ -30,7 +30,7 @@
             <td class="price_sale">{{$product['price_sale']}}</td>
             <td class="note">{{$product['note']}}</td>
             <td class="action">
-                <a href="{{ url('/product/detail') }}" class="btn btn-danger btn-remove-row-1"><i class="fas fa-trash-alt" aria-hidden="true"></i></a>
+                <a productID = "{{$product['id']}}" id="btn-delete" class="btn btn-danger btn-remove-row-1"><i class="fas fa-trash-alt" aria-hidden="true"></i></a>
                 <a href="{{ url('/product/'.$product['id'].'/edit') }}" class="btn btn-warning btn-update-row-1"><i class="fas fa-edit"></i></a>
                 {{--<a href="{{'http://localhost:8005/product/edit'}}" class="btn btn-warning btn-update-row-1"><i class="fas fa-edit"></i></a>--}}
             </td>

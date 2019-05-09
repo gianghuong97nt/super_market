@@ -9,12 +9,8 @@ function initEvents() {
 
     $(document).on('click', '#btn-delete', function () {
         try {
-            var len = $('#table-data-1 tbody tr').length;
-            if(len > 1){
-                var productid = $(this).attr('productid');
-                deleteProduct(productid);
-                // $(this).closest('tr').remove();
-            }
+            var productid = $(this).attr('productid');
+            deleteProduct(productid);
         } catch (e) {
             alert('remove row ' + e.message);
         }
@@ -26,6 +22,7 @@ function deleteProduct(product_id) {
     try {
         var data = {};
         data.product_id = product_id;
+        alert(product_id);
 
         $.ajax({
             type: 'POST',
