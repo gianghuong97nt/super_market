@@ -3,6 +3,10 @@
 @section('link')
     <link href="{{asset('asset/css/detail_pro.css')}}" rel='stylesheet' type='text/css' />
 @endsection
+
+@section('tag')
+    <script src="{{ asset('js/detailProduct.js') }}"></script>
+@endsection
 @section('content')
     <div class="forms tables">
         <div class="row">
@@ -10,7 +14,7 @@
                 <h2 class="title1">Chi tiết sản phẩm</h2>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 btn-btn d-inline">
-                <button type="button" class="btn btn-success btn-2">Save</button>
+                <button type="button" class="btn btn-success btn-2" id="btn-detail">Save</button>
                 <a href="{{'http://localhost:8005'}}"><button type="button" class="btn btn-success btn-2 btn-back">Back</button></a>
             </div>
         </div>
@@ -23,7 +27,7 @@
                             <label class="form-control label-info">Mã sản phẩm</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="product_id"/>
+                            <input type="text" class="form-control" id="product_id" disabled/>
                         </div>
                     </div>
                     <div class="row">
@@ -39,10 +43,11 @@
                             <label class="form-control label-info">Danh mục</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <select class="category">
-                                <option>Ti vi</option>
-                                <option>Tủ lạnh</option>
-                                <option>Điều hòa nhiệt độ</option>
+                            <select id="category">
+                                <option value="0"></option>
+                                @foreach($categories as $category )
+                                    <option value="{{$category['category_id']}}">{{$category['name']}}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>

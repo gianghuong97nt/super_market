@@ -20,14 +20,14 @@ Route::get('/', function () {
 //});
 
 // chi tiết sản phẩm
-Route::get('/product/detail', function (){
-    return view('product/detail');
-});
+//Route::get('/product/detail', function (){
+//    return view('product/detail');
+//});
 
-// Sửa sản phẩm
-Route::get('/product/edit', function (){
-    return view('product/edit');
-});
+//// Sửa sản phẩm
+//Route::get('/product/edit', function (){
+//    return view('product/edit');
+//});
 
 
 /**
@@ -82,3 +82,16 @@ Route::get('/product/{id}/edit', 'ProductController@edit')->name('product.edit')
 
 // Route tim kiem san pham
 Route::post('/product/update', 'ProductController@update')->name('product.update');
+
+
+// Add new product
+Route::get('/product/detail', 'ProductController@detail')->name('product.detail');
+
+
+// Route store san pham da the,
+Route::post('/product/add', 'ProductController@add')->name('product.add');
+
+
+//Route delete product
+Route::post('/product/delete', 'ProductController@delete')->name('product.delete');
+

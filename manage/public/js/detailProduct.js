@@ -1,49 +1,57 @@
 
 'use strict';
 $(document).ready(function () {
+    init();
     initEvents();
 });
 
+function init() {
+    $('#product_name').focus();
+}
+
 function initEvents() {
-    $(document).on('click','#save_info',function (e) {
+    $(document).on('click','#btn-detail',function (e) {
         try {
             e.preventDefault();
-            personalInfo();
+            addProduct();
         } catch (e) {
-            alert('personalInfo' + e.message);
+            alert('Detail' + e.message);
         }
     });
 }
 
-function personalInfo() {
+function addProduct() {
     try {
         var data = {};
-        var id         =  $('#userID').val();
-        var username   =  $('#userName').val();
-        var email      =  $('#email').val();
-        var phone      =  $('#phone').val();
-        var birthday   =  $('#birthday').val();
-        var password   =  $('#passwordInfo').val();
-        //var repassword =  $('#repassword').val();
-        var address    =  $('#address').val();
-        var gender     =  $('#gender').val();
-        var avatar     =  $('#avatar').val();
+        var id          =  $('#product_id').val();
+        var category    =  $('#category').val();
+        var name        =  $('#product_name').val();
+        var supplier    =  $('#supplier').val();
+        var brand       =  $('#brand').val();
+        var size        =  $('#size').val();
+        var color       =  $('#color').val();
+        var quantity    =  $('#quantity').val();
+        var price_core  =  $('#price_core').val();
+        var price_sale  =  $('#price_sale').val();
+        var note        =  $('#note').val();
 
 
-        data.id = id;
-        data.username = username;
-        data.email = email;
-        data.phone = phone;
-        data.birthday = birthday;
-        data.password = password;
-        data.address = address;
-        data.gender = gender;
-        data.avatar = avatar;
+        data.id         = id;
+        data.name       = name;
+        data.category   = category;
+        data.supplier   = supplier;
+        data.brand      = brand;
+        data.color      = color;
+        data.size       = size;
+        data.quantity   = quantity;
+        data.price_core = price_core;
+        data.price_sale = price_sale;
+        data.note       = note;
 
 
         $.ajax({
             type: 'POST',
-            url: '/updatePersonalInfo',
+            url: '/product/add',
             dataType: 'json',  //html
             loading: true,
             data: data,
@@ -69,7 +77,7 @@ function personalInfo() {
             // }
         });
     } catch (e) {
-        alert('login' + e.message);
+        alert('Detail' + e.message);
     }
 
 }

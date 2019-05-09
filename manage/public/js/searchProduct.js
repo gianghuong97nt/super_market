@@ -18,9 +18,6 @@ function initEvents() {
     $(document).on('click', '.pagination-location li a', function () {
         try {
             var page = $(this).attr('page');
-            //lấy cha của đối tượng đang thao tác
-            // var _this = $(this).closest('.pagination_product');
-            // var cat_id = $(_this).attr('catid');
 
             loadProduct(page);
         } catch (e) {
