@@ -37,9 +37,6 @@ class LoginController extends Controller
             'users'=>$get_user[1][0]['user_name'],
         ]);
 
-//        $result = [
-//            'status' => '200'
-//        ];
 
         if((isset($get_user[0][0]['result'])?$get_user[0][0]['result']:'') == 'ok'){
 

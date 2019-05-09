@@ -42,7 +42,12 @@
                             <label class="form-control label-info">Email</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="email" value="{{$user[0]['email']}}"/>
+                            <input type="text" name="email" class="form-control" id="email" value="{{$user[0]['email']}}"/>
+<!--                        --><?php
+//                            if (preg_match ("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+\.[A-Za-z]{2,6}$/", value('email'))) {
+//                                echo 'ok';
+//                            }
+//                         ?>
                         </div>
                     </div>
                     <div class="row">

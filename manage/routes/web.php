@@ -34,6 +34,7 @@ Route::get('/', function () {
  * --------------------------Route cho phan login, logout---------------------------------------
  */
 
+
 //Route login
 
 Route::get('/login', 'LoginController@login')->name('login');
