@@ -35,7 +35,6 @@ function login() {
                 switch (res['status']) {
                     // Success
                     case '200':
-                        alert("Login thanh cong");
                         window.location.href = "/";
                         break;
                     // Data Validate

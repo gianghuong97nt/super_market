@@ -71,3 +71,14 @@ Route::get('/product', 'ProductController@index')->name('product');
 
 // Route tim kiem san pham
 Route::post('/product/search', 'ProductController@search')->name('product.search');
+
+//Route phan trang
+Route::post('/product/load', 'ProductController@load')->name('product.load');
+
+//Route edit san pham
+Route::get('/product/{id}/edit', 'ProductController@edit')->name('product.edit');
+
+
+
+// Route tim kiem san pham
+Route::post('/product/update', 'ProductController@update')->name('product.update');

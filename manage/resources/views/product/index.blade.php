@@ -30,13 +30,13 @@
                                     <label class="form-control label-info">Mã sản phẩm</label>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" class="form-control" id="product_id" />
+                                    <input type="text" class="form-control" id="product_id_search" />
                                 </div>
                                 <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
                                     <label class="form-control label-info">Hãng</label>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" class="form-control" id="brand"/>
+                                    <input type="text" class="form-control" id="brand_search"/>
                                 </div>
 
                             </div>
@@ -46,8 +46,8 @@
                                     <label class="form-control label-info">Danh mục</label>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                    <select id="category">
-                                        <option></option>
+                                    <select id="category_search">
+                                        <option value="0"></option>
                                         @foreach($categories as $category )
                                         <option value="{{$category['category_id']}}">{{$category['name']}}</option>
                                         @endforeach
@@ -57,7 +57,7 @@
                                     <label class="form-control label-info">Cỡ</label>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" class="form-control" id="size"/>
+                                    <input type="text" class="form-control" id="size_search"/>
                                 </div>
                             </div>
                             <div class="row">
@@ -65,13 +65,13 @@
                                     <label class="form-control label-info">Tên sản phẩm</label>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" class="form-control" id="product_name"/>
+                                    <input type="text" class="form-control" id="product_name_search"/>
                                 </div>
                                 <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
                                     <label class="form-control label-info">Màu sắc</label>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" class="form-control" id="color"/>
+                                    <input type="text" class="form-control" id="color_search"/>
                                 </div>
                             </div>
                             <div class="row">
@@ -79,7 +79,7 @@
                                     <label class="form-control label-info">Nhà cung cấp</label>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" class="form-control" id="supplier"/>
+                                    <input type="text" class="form-control" id="supplier_search"/>
                                 </div>
                             </div>
                         </div>

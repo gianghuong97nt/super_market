@@ -13,8 +13,22 @@ function initEvents() {
             alert('searchProduct' + e.message);
         }
     });
-}
 
+    //phan trang
+    $(document).on('click', '.pagination-location li a', function () {
+        try {
+            var page = $(this).attr('page');
+            //lấy cha của đối tượng đang thao tác
+            // var _this = $(this).closest('.pagination_product');
+            // var cat_id = $(_this).attr('catid');
+
+            loadProduct(page);
+        } catch (e) {
+            alert('.pagination li' + e.message);
+        }
+    });
+}
+// Tìm kiếm theo điều kiện search
 function searchProduct() {
     try {
         var data = {};
@@ -25,7 +39,8 @@ function searchProduct() {
         var brand       =  $('#brand_search').val();
         var size        =  $('#size_search').val();
         var color       =  $('#color_search').val();
-        //
+
+
         data.page_size  = 4;
         data.page       = 1;
         data.id         = id;
@@ -41,15 +56,49 @@ function searchProduct() {
             url: '/product/search',
             dataType: 'html',  //html
             loading: true,
-            data: data,
+            data: JSON.stringify(data),
+            //data: data,
             ///
             success: function (res) {
-                $('#table-result').html(res);
+                $('#table-result').empty();
+                $('#table-result').append(res);
             }
         });
     } catch (e) {
-        alert('login' + e.message);
+        alert('search' + e.message);
     }
 
 }
+
+//Phan trang
+
+function loadProduct(page) {
+    try {
+        var data = {};
+        data.page_size  = 4;
+        data.page = page;
+
+        $.ajax({
+            type: 'POST',
+            url: '/product/load',
+            dataType: 'html',  //html
+            loading: true,
+            data: JSON.stringify(data),
+
+            success: function (res) {
+                $('#table-result').empty();
+                $('#table-result').append(res);
+
+            },
+            // Ajax error
+            error: function (res) {
+            }
+
+        });
+    } catch (e) {
+        alert('pagination' + e.message);
+    }
+
+}
+
 

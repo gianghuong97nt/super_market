@@ -31,7 +31,8 @@
             <td class="note">{{$product['note']}}</td>
             <td class="action">
                 <a class="btn btn-danger btn-remove-row-1"><i class="fas fa-trash-alt" aria-hidden="true"></i></a>
-                <a href="{{'http://localhost:8005/product/edit'}}" class="btn btn-warning btn-update-row-1"><i class="fas fa-edit"></i></a>
+                <a href="{{ url('/product/'.$product['id'].'/edit') }}" class="btn btn-warning btn-update-row-1"><i class="fas fa-edit"></i></a>
+                {{--<a href="{{'http://localhost:8005/product/edit'}}" class="btn btn-warning btn-update-row-1"><i class="fas fa-edit"></i></a>--}}
             </td>
         </tr>
     @endforeach
