@@ -1,18 +1,58 @@
 
 'use strict';
 $(document).ready(function () {
+    init();
     initEvents();
 });
 
+function init() {
+    $('#email').focus();
+}
 function initEvents() {
     $(document).on('click','#save_info',function (e) {
         try {
             e.preventDefault();
-            personalInfo();
+            if(!isEmail($('#email').val()) || $('#passwordInfo').val() == "" || $('#repassword').val() == ""){
+                if(!isEmail($('#email').val())){
+                    $("#invalid_email").removeClass('display_view');
+                    $("#invalid_email").html("Bạn nhập chưa nhập email. Mời nhập lại");
+                }
+                else if($('#passwordInfo').val() == ""){
+                    $("#invalid_password").removeClass('display_view');
+                    $("#invalid_password").html("Bạn nhập chưa nhập mật khẩu. Mời nhập lại");
+                }
+                else if($('#repassword').val() == ""){
+                    $("#invalid_repassword").removeClass('display_view');
+                    $("#invalid_repassword").html("Bạn nhập chưa xac nhan mật khẩu. Mời nhập lại");
+                }
+            }else{
+                if($('#passwordInfo').val() != $('#repassword').val()){
+                    $("#invalid_repassword").removeClass('display_view');
+                    $("#invalid_repassword").html("Mật khẩu không khớp. Mời nhập lại");
+                }else{
+                    personalInfo();
+                    $("#invalid_email").addClass('display_view');
+                }
+            }
         } catch (e) {
             alert('personalInfo' + e.message);
         }
     });
+
+    $(document).on('change','#email',function (e) {
+        try {
+            e.preventDefault();
+            if(isEmail($('#email').val())) {
+                $("#invalid_email").addClass('display_view');
+            }else{
+                $("#invalid_email").removeClass('display_view');
+                $("#invalid_email").html("Bạn nhập sai định dạng email. Mời nhập lại");
+            }
+        } catch (e) {
+            alert('nhập email' + e.message);
+        }
+    });
+
 }
 
 function personalInfo() {
@@ -28,7 +68,6 @@ function personalInfo() {
         var address    =  $('#address').val();
         var gender     =  $('#gender').val();
         var avatar     =  $('#avatar').val();
-
 
         data.id = id;
         data.username = username;
@@ -64,13 +103,15 @@ function personalInfo() {
                         break;
                 }
             }
-            // // Ajax error
-            // error: function (res) {
-            // }
         });
     } catch (e) {
         alert('login' + e.message);
     }
 
+}
+
+function isEmail(email) {
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
 }
 

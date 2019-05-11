@@ -8,7 +8,22 @@ function initEvents() {
     $(document).on('click','#login',function (e) {
         try {
             e.preventDefault();
-            login();
+            if(($('#username').val()) == "" || $('#password').val() == "" ){
+
+                if($('#username').val() == ""){
+                    $("#invalid_username").removeClass('display_view');
+                    $("#invalid_username").html("Bạn nhập chưa nhập username. Mời nhập lại");
+                }
+                else if($('#password').val() == ""){
+                    $("#invalid_password").removeClass('display_view');
+                    $("#invalid_password").html("Bạn nhập chưa nhập mật khẩu. Mời nhập lại");
+                }
+
+            }else {
+                login();
+                $("#invalid_email").addClass('display_view');
+            }
+
         } catch (e) {
             alert('login' + e.message);
         }
@@ -39,20 +54,22 @@ function login() {
                         break;
                     // Data Validate
                     case 'NG':
-                        alert("Loi 201");
+                        $("#checkLogin").removeClass('display_view');
+                        $("#checkLogin").html("Tài khoản không tồn tại");
                         break;
 
                     default:
                         break;
                 }
             }
-            // // Ajax error
-            // error: function (res) {
-        // }
+
         });
     } catch (e) {
         alert('login' + e.message);
     }
 
 }
+
+
+
 

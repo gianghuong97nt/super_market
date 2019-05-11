@@ -15,15 +15,18 @@
     <div class="form-panel one">
         <div class="form-header">
             <h1>Login</h1>
+            <span class="error display_view" id="checkLogin"></span>
         </div>
         <div class="form-content">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required="required"/>
+                <span class="error display_view" id="invalid_username"></span>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required="required"/>
+                <span class="error display_view" id="invalid_password"></span>
             </div>
             <div class="form-group">
                 <label class="form-remember">

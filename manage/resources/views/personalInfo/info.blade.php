@@ -13,7 +13,7 @@
                 <h2 class="title1">Thông tin cá nhân</h2>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 btn-btn d-inline">
-                <button type="button" class="btn btn-success btn-2" id="save_info">Save</button>
+                <button type="button" class="btn btn-success btn-2" id="save_info" name="btn-save-info">Save</button>
                 <a href="{{'http://localhost:8005'}}"><button type="button" class="btn btn-success btn-2 btn-back">Back</button></a>
             </div>
         </div>
@@ -34,7 +34,7 @@
                             <label class="form-control label-info">Tên</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="userName" value="{{$user[0]['user_name']}}"/>
+                            <input type="text" class="form-control" id="userName" disabled value="{{$user[0]['user_name']}}"/>
                         </div>
                     </div>
                     <div class="row">
@@ -43,11 +43,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <input type="text" name="email" class="form-control" id="email" value="{{$user[0]['email']}}"/>
-<!--                        --><?php
-//                            if (preg_match ("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+\.[A-Za-z]{2,6}$/", value('email'))) {
-//                                echo 'ok';
-//                            }
-//                         ?>
+                            <span class="error display_view" id="invalid_email"></span>
                         </div>
                     </div>
                     <div class="row">
@@ -72,6 +68,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <input type="password" class="form-control" id="passwordInfo" value="{{$user[0]['password']}}"/>
+                            <span class="error display_view" id="invalid_password"></span>
                         </div>
                     </div>
                     <div class="row">
@@ -79,7 +76,8 @@
                             <label class="form-control label-info">Xác nhận MK</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="password" class="form-control" id="repassword" placeholder="Confirm Password"/>
+                            <input type="password" class="form-control" id="repassword" value="{{$user[0]['password']}}"/>
+                            <span class="error display_view" id="invalid_repassword"></span>
                         </div>
                     </div>
                     <div class="row">

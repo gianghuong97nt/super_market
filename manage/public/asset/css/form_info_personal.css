@@ -9,6 +9,15 @@
     margin-left: -15px;
 }
 
+.error {
+    color: red;
+    margin-left: -40px;
+}
+
+.display_view{
+    display: none;
+}
+
 .form-body {
     padding: 2em 2em;
 }
@@ -55,11 +64,12 @@
 #userID{
     width: 70px;
 }
-#username {
+#userName {
     width: 300px;
 }
 #email {
     width: 300px;
+    border-color: red;
 }
 #phone {
     width: 120px;
@@ -70,9 +80,11 @@
 
 #passwordInfo {
     width: 170px;
+    border-color: red;
 }
 #repassword {
     width: 170px;
+    border-color: red;
 }
 
 #address {
