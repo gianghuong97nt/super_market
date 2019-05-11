@@ -5,6 +5,8 @@ $(document).ready(function () {
     initEvents();
 });
 
+var result = "";
+
 function init() {
     $('#product_name').focus();
 }
@@ -13,11 +15,38 @@ function initEvents() {
     $(document).on('click','#btn-detail',function (e) {
         try {
             e.preventDefault();
-            addProduct();
+            validate();
+            if(result == 'ok'){
+                $.dialogUpdate({
+                    contents: JSMESSAGE.save_confirm,
+                    callback: function (confirm) {
+                        if (confirm) {
+                            addProduct();
+                        }
+                    }
+                });
+            }
         } catch (e) {
             alert('Detail' + e.message);
         }
     });
+}
+
+function validate() {
+    if($('#product_name').val() == "" || $('#category').val() == 0){
+
+        if($('#product_name').val() == ""){
+            $("#invalid_product_name").removeClass('display_view');
+            $("#invalid_product_name").html("Bạn nhập chưa nhập tên sản phẩm. Mời nhập lại");
+        }
+        else if($('#category').val() == 0){
+            $("#invalid_category").removeClass('display_view');
+            $("#invalid_category").html("Bạn nhập chưa nhập danh mục. Mời nhập lại");
+        }
+        result = 'fail';
+    }else{
+        result = 'ok';
+    }
 }
 
 function addProduct() {
@@ -60,8 +89,13 @@ function addProduct() {
                 switch (res['status']) {
                     // Success
                     case '200':
-                        alert("Update thanh cong");
-                        location.reload();
+                        $.dialogComplete({
+                            contents: JSMESSAGE.save_complete,
+                            callback: function () {
+                                location.reload();
+                            }
+                        });
+                        //alert("Update thanh cong");
                         break;
                     // Data Validate
                     case 'NG':

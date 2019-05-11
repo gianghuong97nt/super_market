@@ -36,6 +36,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <input type="text" class="form-control" id="product_name"/>
+                            <span class="error display_view" id="invalid_product_name"></span>
                         </div>
                     </div>
                     <div class="row">
@@ -49,8 +50,10 @@
                                     <option value="{{$category['category_id']}}">{{$category['name']}}</option>
                                 @endforeach
                             </select>
+                            <span class="error display_view" id="invalid_category"></span>
                         </div>
                     </div>
+
                     <div class="row">
                         <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
                             <label class="form-control label-info">Nhà cung cấp</label>

@@ -13,7 +13,15 @@ function initEvents() {
     $(document).on('click','#btn-update',function (e) {
         try {
             e.preventDefault();
-            updateProduct();
+            $.dialogUpdate({
+                contents: JSMESSAGE.save_confirm,
+                callback: function (confirm) {
+                    if (confirm) {
+                        updateProduct();
+                    }
+                }
+            });
+
         } catch (e) {
             alert('searchProduct' + e.message);
         }
@@ -59,7 +67,12 @@ function updateProduct() {
             data: data,
 
             success: function (res) {
-              // window.location.reload();
+                $.dialogComplete({
+                    contents: JSMESSAGE.save_complete,
+                    callback: function () {
+                        location.reload();
+                    }
+                });
 
             },
             // Ajax error

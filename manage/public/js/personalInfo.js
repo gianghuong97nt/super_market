@@ -44,7 +44,6 @@ function validate() {
                 $("#invalid_email").removeClass('display_view');
                 $("#invalid_email").html("Bạn nhập sai định dạng email. Mời nhập lại");
             }
-
         }
         else if($('#passwordInfo').val() == ""){
             $("#invalid_password").removeClass('display_view');
@@ -59,11 +58,19 @@ function validate() {
             $("#invalid_repassword").removeClass('display_view');
             $("#invalid_repassword").html("Mật khẩu không khớp. Mời nhập lại");
         }else{
-            personalInfo();
+            $.dialogUpdate({
+                contents: JSMESSAGE.save_confirm,
+                callback: function (confirm) {
+                    if (confirm) {
+                        personalInfo();
+                    }
+                }
+            });
             $("#invalid_email").addClass('display_view');
         }
     }
 }
+
 
 function personalInfo() {
     try {
@@ -78,6 +85,8 @@ function personalInfo() {
         var address    =  $('#address').val();
         var gender     =  $('#gender').val();
         var avatar     =  $('#avatar').val();
+
+
 
         data.id = id;
         data.username = username;
@@ -101,8 +110,12 @@ function personalInfo() {
                 switch (res['status']) {
                     // Success
                     case '200':
-                        alert("Update thanh cong");
-                        location.reload();
+                        $.dialogComplete({
+                            contents: JSMESSAGE.save_complete,
+                            callback: function () {
+                                location.reload();
+                            }
+                        });
                         break;
                     // Data Validate
                     case 'NG':

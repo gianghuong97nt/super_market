@@ -24,8 +24,6 @@ class UserController extends Controller
     public function updatePersonalInfo(Request $request){
         try {
             $param = $request->all();
-
-
             $data = Dao::call_stored_procedure('[SPC_USERS_ACT02]', $param);
 
             if ($data[0][0]['Data'] == 'Exception' || $data[0][0]['Data'] == 'EXCEPTION') { //SQL Exception

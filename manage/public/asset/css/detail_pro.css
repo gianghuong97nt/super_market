@@ -19,6 +19,14 @@
     display: inline-block;
 }
 
+.error{
+    color: red;
+}
+
+.display_view {
+    display: none;
+}
+
 .row {
     margin-bottom: 5px;
 }
@@ -56,24 +64,24 @@
     width: 15%;
 }
 #product_name{
-    width: 70%;
+    width: 50%;
     border-color: red;
 }
 #category {
-    width: 70%;
+    width: 50%;
 }
 #supplier {
-    width: 70%;
+    width: 50%;
 }
 #brand {
-    width: 50%;
+    width: 30%;
 }
 
 #color {
-    width: 50%;
+    width: 30%;
 }
 #size {
-    width: 50%;
+    width: 30%;
 }
 
 #quantity {
@@ -86,7 +94,7 @@
     width: 30%;
 }
 #note {
-    width: 70%;
+    width: 50%;
 }
 @media only screen and (max-width: 320px) {
     .label-info {
