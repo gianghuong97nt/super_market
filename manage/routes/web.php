@@ -24,9 +24,13 @@ Route::get('/', function () {
 //    return view('product/detail');
 //});
 
-//// Sửa sản phẩm
-//Route::get('/product/edit', function (){
-//    return view('product/edit');
+// Sửa sản phẩm
+//Route::get('/abc', function (){
+//    return view('auth/index');
+//});
+//
+//Route::post('/upload', function (){
+//    return view('auth/upload');
 //});
 
 
@@ -96,3 +100,9 @@ Route::post('/product/add', 'ProductController@add')->name('product.add');
 //Route delete product
 Route::post('/product/delete', 'ProductController@delete')->name('product.delete');
 
+
+
+//Route Anh
+Route::post('/upload', 'UserController@uploadImage');
+
+Route::post('/deleteImage', 'UserController@deleteImage')->name('deleteImage');

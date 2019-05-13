@@ -104,7 +104,21 @@
                             <label class="form-control label-info">Ảnh</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <img src="{{'asset/images/cuc.png'}}" id="avatar">
+                            <div style="width:250px;height: 250px; border: 1px solid whitesmoke ; margin-left: -40px; text-align: center;position: relative" id="image">
+                                <img style="width: 100%; height: 100%; margin-left: 0px" id="preview_image" src="{{isset($user[0]['avata'])&&$user[0]['avata']!=''?'uploads/'.$user[0]['avata']:'uploads/cuc1.jpg'}}" />
+                                <i id="loading" class="fa fa-spinner fa-spin fa-3x fa-fw" style="position: absolute;left: 40%;top: 40%;display: none"></i>
+                            </div>
+                            <p>
+                                <a href="javascript:changeProfile()" style="text-decoration: none;">
+                                    <i class="glyphicon glyphicon-edit"></i> Change
+                                </a>&nbsp;&nbsp;
+                                <a href="javascript:removeFile()" style="color: red;text-decoration: none;">
+                                    <i class="glyphicon glyphicon-trash"></i>
+                                    Remove
+                                </a>
+                            </p>
+                            <input type="file" id="file" style="display: none"/>
+                            <input type="hidden" id="file_name"/>
                         </div>
 
                     </div>
