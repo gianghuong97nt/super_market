@@ -29,12 +29,12 @@ class LoginController extends Controller
 
         $get_user = Dao::call_stored_procedure('[SPC_USERS_ACT01]',$params);
 
-//        var_dump( $get_user[1]);
-//        var_dump( $get_user[1][0]['username']);
-//        exit;
-
         session([
             'users'=>$get_user[1][0]['user_name'],
+        ]);
+
+        session([
+            'avatar'=>$get_user[1][0]['avata'],
         ]);
 
 
