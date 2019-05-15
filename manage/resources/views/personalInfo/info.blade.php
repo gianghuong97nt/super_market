@@ -12,9 +12,9 @@
             <div class="d-inline">
                 <h2 class="title1">Thông tin cá nhân</h2>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 btn-btn d-inline">
-                <button type="button" class="btn btn-success btn-2" id="save_info" name="btn-save-info">Save</button>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 btn-btn d-inline">
                 <a href="{{'http://localhost:8005'}}"><button type="button" class="btn btn-success btn-2 btn-back">Back</button></a>
+                <button type="button" class="btn btn-success btn-2" id="save_info" name="btn-save-info">Save</button>
             </div>
         </div>
         <div class="form-grids row widget-shadow">
@@ -34,7 +34,7 @@
                             <label class="form-control label-info">Tên</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="userName" disabled value="{{$user[0]['user_name']}}"/>
+                            <input type="text" class="form-control" id="userName" disabled value="{{$user[0]['user_name']}}" maxlength="20"/>
                         </div>
                     </div>
                     <div class="row">
@@ -42,7 +42,7 @@
                             <label class="form-control label-info">Email</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" name="email" class="form-control" id="email" value="{{$user[0]['email']}}"/>
+                            <input type="text" name="email" class="form-control" id="email" value="{{$user[0]['email']}}" maxlength="50"/>
                             <span class="error display_view" id="invalid_email"></span>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                             <label class="form-control label-info">SĐT</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="phone" value="{{$user[0]['phone']}}"/>
+                            <input type="tel" class="form-control" id="phone" value="{{$user[0]['phone']}}" maxlength="12"/>
                         </div>
                     </div>
                     <div class="row">
@@ -67,7 +67,7 @@
                             <label class="form-control label-info">Mật khẩu</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="password" class="form-control" id="passwordInfo" value="{{$user[0]['password']}}"/>
+                            <input type="password" class="form-control" id="passwordInfo" value="{{$user[0]['password']}}" maxlength="20"/>
                             <span class="error display_view" id="invalid_password"></span>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                             <label class="form-control label-info">Xác nhận</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="password" class="form-control" id="repassword" value="{{$user[0]['password']}}"/>
+                            <input type="password" class="form-control" id="repassword" value="{{$user[0]['password']}}" maxlength="20"/>
                             <span class="error display_view" id="invalid_repassword"></span>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                             <label class="form-control label-info">Địa chỉ</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="address" value="{{$user[0]['address']}}"/>
+                            <input type="text" class="form-control" id="address" value="{{$user[0]['address']}}" maxlength="50"/>
                         </div>
                     </div>
                     <div class="row">

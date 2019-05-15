@@ -103,7 +103,7 @@
         float: right;
     }
 
-    #save_info{
+    .btn-back{
         margin-left: 10px;
     }
 
@@ -157,7 +157,7 @@
         font-size: 14px;
     }
 
-    #save_info{
+    .btn-back{
         margin-left: 10px;
     }
 
@@ -200,7 +200,7 @@
         font-size: 14px;
     }
 
-    #save_info{
+    .btn-back{
         margin-left: 5px;
     }
     .row input {
@@ -234,15 +234,15 @@
 @media only screen and (min-width: 1200px) {
     .btn-2{
         max-width: 90px;
-        width: 60px;
-        /*float: right;*/
+        width: 90px;
+        float: right;
         font-size: 14px;
     }
     /*.label-info {*/
         /*width: 200px;*/
         /*max-width: 200px;*/
     /*}*/
-    #save_info{
+    .btn-back{
         margin-left: 5px;
     }
 

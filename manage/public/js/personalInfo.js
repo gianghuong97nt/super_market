@@ -117,7 +117,7 @@ function initEvents() {
 }
 
 function validate() {
-    if(!isEmail($('#email').val()) || $('#passwordInfo').val() == "" || $('#repassword').val() == ""){
+    if(!isEmail($('#email').val()) || $('#passwordInfo').val() == "" || $('#repassword').val() == ""  ){
         if(!isEmail($('#email').val())){
             if($('#email').val() == ""){
                 $("#invalid_email").removeClass('display_view');
