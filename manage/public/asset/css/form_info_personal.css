@@ -94,27 +94,43 @@
     width: 100px;
 }
 #avatar {
-    width: 50%;
-    height: 50%;
+    width:250px;height: 250px; margin-left: -40px; text-align: center;position: relative
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .btn-2{
+        max-width: 70px;
+        margin-bottom: 15px;
+        float: right;
+    }
+
+    #save_info{
+        margin-left: 10px;
+    }
+
     .label-info {
         margin-left: -20px;
         margin-bottom: 3px;
-        max-width: 160px;
-        width: 160px;
+        max-width: 200px;
+        width: 200px;
     }
     .row input {
         font-size: 13px;
+        margin-left: -20px
     }
     .row select {
         font-size: 13px;
+        margin-left: -20px
+    }
+
+    #avatar {
+        margin-left: -20px;
+        width:200px;height: 200px;
     }
     .btn-2 {
         font-size: 13px;
         width: 48%;
     }
-    #username {
+    #userName {
         width: 200px;
     }
     #email {
@@ -126,38 +142,67 @@
 
 }
 
-@media only screen and (min-width: 321px) and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
     .label-info {
         margin-left: -20px;
         margin-bottom: 3px;
         max-width: 160px;
         width: 160px;
     }
-    .btn-2 {
-        width: 60px;
+
+    .btn-2{
+        max-width: 90px;
+        margin-bottom: 15px;
+        float: right;
+        font-size: 14px;
+    }
+
+    #save_info{
+        margin-left: 10px;
+    }
+
+    .label-info {
+        margin-left: -20px;
+        margin-bottom: 3px;
+        max-width: 200px;
+        width: 200px;
     }
     .row input {
         font-size: 15px;
+        margin-left: -20px
     }
     .row select {
         font-size: 15px;
+        margin-left: -20px
     }
-    .btn-2 {
-        font-size: 14px;
+
+    #avatar {
+        margin-left: -20px;
+        width:200px;height: 200px;
     }
-    #username {
-        min-width: 200px;
-        max-width: 200px;
+
+    #userName {
+        width: 200px;
     }
     #email {
-        width: 200px;
+        width: 300px;
     }
     #address {
-        width: 200px;
+        width: 400px;
     }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .btn-2{
+        max-width: 90px;
+        float: right;
+        font-size: 14px;
+    }
+
+    #save_info{
+        margin-left: 5px;
+    }
     .row input {
         font-size: 16px;
     }
@@ -173,6 +218,7 @@
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+
     .row input {
         font-size: 16px;
     }
@@ -186,9 +232,30 @@
 }
 
 @media only screen and (min-width: 1200px) {
-    .label-info {
-        min-width: 165px;
+    .btn-2{
+        max-width: 90px;
+        width: 60px;
+        /*float: right;*/
+        font-size: 14px;
     }
+    /*.label-info {*/
+        /*width: 200px;*/
+        /*max-width: 200px;*/
+    /*}*/
+    #save_info{
+        margin-left: 5px;
+    }
+
+    /*.row input {*/
+        /*margin-left: -50px;*/
+    /*}*/
+    /*.row select {*/
+        /*margin-left: -120px;*/
+    /*}*/
+
+    /*#avatar {*/
+        /*margin-left: -120px;*/
+    /*}*/
 
 }
 

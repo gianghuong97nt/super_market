@@ -73,7 +73,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-                            <label class="form-control label-info">Xác nhận MK</label>
+                            <label class="form-control label-info">Xác nhận</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <input type="password" class="form-control" id="repassword" value="{{$user[0]['password']}}"/>
@@ -104,7 +104,7 @@
                             <label class="form-control label-info">Ảnh</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <div style="width:250px;height: 250px; border: 1px solid whitesmoke ; margin-left: -40px; text-align: center;position: relative" id="image">
+                            <div style="" id="avatar">
                                 <img style="width: 100%; height: 100%; margin-left: 0px" id="preview_image" src="{{isset($user[0]['avata'])&&$user[0]['avata']!=''?'uploads/'.$user[0]['avata']:'uploads/cuc1.jpg'}}" />
                                 <i id="loading" class="fa fa-spinner fa-spin fa-3x fa-fw" style="position: absolute;left: 40%;top: 40%;display: none"></i>
                             </div>

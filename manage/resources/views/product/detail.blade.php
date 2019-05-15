@@ -35,7 +35,7 @@
                             <label class="form-control label-info">Tên sản phẩm</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="product_name"/>
+                            <input type="text" class="form-control" id="product_name" maxlength="20"/>
                             <span class="error display_view" id="invalid_product_name"></span>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
                             <label class="form-control label-info">Nhà cung cấp</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="supplier"/>
+                            <input type="text" class="form-control" id="supplier" maxlength="20"/>
                         </div>
                     </div>
                     <div class="row">
@@ -67,7 +67,7 @@
                             <label class="form-control label-info">Hãng</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="brand"/>
+                            <input type="text" class="form-control" id="brand" maxlength="20"/>
                         </div>
                     </div>
                     <div class="row">
@@ -75,7 +75,7 @@
                             <label class="form-control label-info">Màu sắc</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="color"/>
+                            <input type="text" class="form-control" id="color" maxlength="20"/>
                         </div>
                     </div>
                     <div class="row">
@@ -83,7 +83,7 @@
                             <label class="form-control label-info">Cỡ</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="size"/>
+                            <input type="text" class="form-control" id="size" maxlength="20"/>
                         </div>
                     </div>
                     <div class="row">
@@ -91,7 +91,7 @@
                             <label class="form-control label-info">Số lượng</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="quantity"/>
+                            <input type="number" min="0" max="100" step="1" class="form-control" id="quantity"/>
                         </div>
                     </div>
                     <div class="row">
@@ -99,7 +99,7 @@
                             <label class="form-control label-info">Giá nhập</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="price_core"/>
+                            <input type="number" min="0" max="900000000" step="100000" class="form-control" id="price_core"/>
                         </div>
                     </div>
                     <div class="row">
@@ -107,7 +107,7 @@
                             <label class="form-control label-info">Giá bán</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="price_sale"/>
+                            <input type="number" min="0" max="900000000" step="100000" class="form-control" id="price_sale"/>
                         </div>
                     </div>
                     <div class="row">
@@ -115,7 +115,7 @@
                             <label class="form-control label-info">Ghi chú</label>
                         </div>
                         <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
-                            <textarea class="form-control" id="note"></textarea>
+                            <textarea class="form-control" id="note" maxlength="50"></textarea>
                         </div>
                     </div>
                 </div>

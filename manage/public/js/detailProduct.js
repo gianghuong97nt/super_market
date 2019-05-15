@@ -30,6 +30,28 @@ function initEvents() {
             alert('Detail' + e.message);
         }
     });
+
+    $(document).on('click','#product_name',function (e) {
+        try {
+            e.preventDefault();
+            $("input").keypress(function(){
+                $("#invalid_product_name").addClass('display_view');
+            });
+
+        } catch (e) {
+            alert('nhập email' + e.message);
+        }
+    });
+
+    $(document).on('change','#category',function (e) {
+        try {
+            e.preventDefault();
+            $("#invalid_category").addClass('display_view');
+
+        } catch (e) {
+            alert('nhập email' + e.message);
+        }
+    });
 }
 
 function validate() {
@@ -98,8 +120,11 @@ function addProduct() {
                         //alert("Update thanh cong");
                         break;
                     // Data Validate
-                    case 'NG':
+                    case '201':
                         alert("Loi 201");
+                        break;
+                    case '202':
+                        alert("Loi 202");
                         break;
 
                     default:

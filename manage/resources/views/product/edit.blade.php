@@ -34,7 +34,7 @@
                             <label class="form-control label-info">Tên sản phẩm</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="product_name_update" value="{{$product[0]['product_name']}}"/>
+                            <input type="text" class="form-control" id="product_name_update" value="{{$product[0]['product_name']}}" maxlength="20"/>
                         </div>
                     </div>
                     <div class="row">
@@ -52,7 +52,7 @@
                             <label class="form-control label-info">Nhà cung cấp</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="supplier_update" value="{{$product[0]['supplier']}}"/>
+                            <input type="text" class="form-control" id="supplier_update" value="{{$product[0]['supplier']}}" maxlength="20"/>
                         </div>
                     </div>
                     <div class="row">
@@ -60,7 +60,7 @@
                             <label class="form-control label-info">Hãng</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="brand_update" value="{{$product[0]['brand']}}"/>
+                            <input type="text" class="form-control" id="brand_update" value="{{$product[0]['brand']}}" maxlength="20"/>
                         </div>
                     </div>
                     <div class="row">
@@ -68,7 +68,7 @@
                             <label class="form-control label-info">Màu sắc</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="color_update" value="{{$product[0]['color']}}"/>
+                            <input type="text" class="form-control" id="color_update" value="{{$product[0]['color']}}" maxlength="20"/>
                         </div>
                     </div>
                     <div class="row">
@@ -76,7 +76,7 @@
                             <label class="form-control label-info">Cỡ</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="size_update" value="{{$product[0]['size']}}"/>
+                            <input type="text" class="form-control" id="size_update" value="{{$product[0]['size']}}" maxlength="20"/>
                         </div>
                     </div>
                     <div class="row">
@@ -84,7 +84,7 @@
                             <label class="form-control label-info">Số lượng</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" class="form-control" id="quantity_update" value="{{$product[0]['quantity']}}"/>
+                            <input type="number" class="form-control" id="quantity_update" value="{{$product[0]['quantity']}}"/>
                         </div>
                     </div>
                     <div class="row">
@@ -108,7 +108,7 @@
                             <label class="form-control label-info">Ghi chú</label>
                         </div>
                         <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
-                            <textarea class="form-control" id="note_update">{{$product[0]['note']}}</textarea>
+                            <textarea class="form-control" id="note_update" maxlength="50">{{$product[0]['note']}}</textarea>
                         </div>
                     </div>
                 </div>

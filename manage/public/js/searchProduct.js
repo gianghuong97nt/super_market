@@ -4,6 +4,8 @@ $(document).ready(function () {
     initEvents();
 });
 
+var _search = 0;
+
 function initEvents() {
     $(document).on('click','#btn-search',function (e) {
         try {
@@ -36,7 +38,9 @@ function initEvents() {
     $(document).on('change', '#page_size', function () {
         try {
             //$("input").trigger("select");
-            searchProduct();
+            if(_search != 0){
+                searchProduct();
+            }
         } catch (e) {
             alert('remove row ' + e.message);
         }
@@ -65,6 +69,7 @@ function searchProduct() {
         data.brand      = brand;
         data.size       = size;
         data.color      = color;
+
         //
         $.ajax({
             type: 'POST',
@@ -75,6 +80,7 @@ function searchProduct() {
             //data: data,
             ///
             success: function (res) {
+                _search = 1;
                 $('#table-result').empty();
                 $('#table-result').append(res);
             }
