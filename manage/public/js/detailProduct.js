@@ -59,11 +59,11 @@ function validate() {
 
         if($('#product_name').val() == ""){
             $("#invalid_product_name").removeClass('display_view');
-            $("#invalid_product_name").html("Bạn nhập chưa nhập tên sản phẩm. Mời nhập lại");
+            $("#invalid_product_name").html("Item sản phẩm không được bỏ trống");
         }
-        else if($('#category').val() == 0){
+        if($('#category').val() == 0){
             $("#invalid_category").removeClass('display_view');
-            $("#invalid_category").html("Bạn nhập chưa nhập danh mục. Mời nhập lại");
+            $("#invalid_category").html("Item sản phẩm không được bỏ trống");
         }
         result = 'fail';
     }else{
@@ -121,10 +121,20 @@ function addProduct() {
                         break;
                     // Data Validate
                     case '201':
-                        alert("Loi 201");
+                        $.dialogComplete({
+                            contents: JSMESSAGE.add_error,
+                            callback: function () {
+                                location.reload();
+                            }
+                        });
                         break;
                     case '202':
-                        alert("Loi 202");
+                        $.dialogComplete({
+                            contents: JSMESSAGE.add_error,
+                            callback: function () {
+                                location.reload();
+                            }
+                        });
                         break;
 
                     default:

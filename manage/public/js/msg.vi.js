@@ -8,7 +8,7 @@ const JSMESSAGE = {
 	save_failed    : '保存に失敗しました。',
 	delete_confirm : 'Bạn có muốn xóa không ？',
 	delete_complete: 'Xóa thành công',
-	delete_failed  : '削除に失敗しました。',
+	delete_failed  : 'Không xoa được',
 	no_select      : '一つも選択されていません。',
 	no_input       : '一つも入力されていません。',
 	output_confirm : 'Bạn có muốn xuất báo cáo không ？',
@@ -24,5 +24,7 @@ const JSMESSAGE = {
 	row            : ' 行目',
 	feital_error   : '致命的エラー',
 	send_confirm   : 'Bạn có muốn gửi không ?',
-	send_complete  : 'Gửi thành công'
+	send_complete  : 'Gửi thành công',
+	update_error   : 'Bạn cập nhật thất bại',
+	add_error      : 'Thêm sản phẩm thất bại'
 };

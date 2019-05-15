@@ -55,13 +55,15 @@
 }
 
 #product_id_update {
-    width: 15%;
+    width: 100px;
 }
 #product_name_update {
-    width: 50%;
+    width: 300px;
+    border-color: red;
 }
 #category_update {
-    width: 50%;
+    width: 200px;
+    border-color: red;
 }
 #supplier_update {
     width: 50%;

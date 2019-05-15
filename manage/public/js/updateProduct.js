@@ -67,12 +67,39 @@ function updateProduct() {
             data: data,
 
             success: function (res) {
-                $.dialogComplete({
-                    contents: JSMESSAGE.save_complete,
-                    callback: function () {
-                        location.reload();
-                    }
-                });
+                switch (res['status']) {
+                    // Success
+                    case '200':
+                        $.dialogComplete({
+                            contents: JSMESSAGE.save_complete,
+                            callback: function () {
+                                location.reload();
+                            }
+                        });
+                        break;
+                    // Data Validate
+                    case '201':
+                        $.dialogComplete({
+                            contents: JSMESSAGE.update_error,
+                            callback: function () {
+                                location.reload();
+                            }
+                        });
+
+                        break;
+                    // SQL + PHP Exception
+                    case '202':
+                        $.dialogComplete({
+                            contents: JSMESSAGE.update_error,
+                            callback: function () {
+                                location.reload();
+                            }
+                        });
+                        break;
+                    default:
+                        break;
+                }
+
 
             },
             // Ajax error

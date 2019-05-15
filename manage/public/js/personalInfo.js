@@ -197,10 +197,17 @@ function personalInfo() {
                         });
                         break;
                     // Data Validate
-                    case 'NG':
-                        alert("Loi 201");
+                    case '201':
+                        $.dialogComplete({
+                            contents: JSMESSAGE.update_error,
+                        });
                         break;
 
+                    case '202':
+                        $.dialogComplete({
+                            contents: JSMESSAGE.update_error,
+                        });
+                        break;
                     default:
                         break;
                 }

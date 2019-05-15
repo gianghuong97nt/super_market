@@ -90,7 +90,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <select id="page_size">
-                            <option value="5">5</option>
+                            <option value="5" >5</option>
                             <option value="15">15</option>
                             <option value="20">20</option>
                         </select>

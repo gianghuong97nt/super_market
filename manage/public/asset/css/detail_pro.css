@@ -61,14 +61,14 @@
 }
 
 #product_id {
-    width: 15%;
+    width: 100px;
 }
 #product_name{
-    width: 50%;
+    width: 300px;
     border-color: red;
 }
 #category {
-    width: 50%;
+    width: 200px;
 }
 #supplier {
     width: 50%;
