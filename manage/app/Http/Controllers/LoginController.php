@@ -30,15 +30,15 @@ class LoginController extends Controller
         $get_user = Dao::call_stored_procedure('[SPC_USERS_ACT01]',$params);
 
         session([
-            'users'=>$get_user[1][0]['user_name'],
+            'users'=>$get_user[2][0]['user_name'],
         ]);
 
         session([
-            'avatar'=>$get_user[1][0]['avata'],
+            'avatar'=>$get_user[2][0]['avata'],
         ]);
 
 
-        if((isset($get_user[0][0]['result'])?$get_user[0][0]['result']:'') == 'ok'){
+        if((isset($get_user[1][0]['result'])?$get_user[1][0]['result']:'') == 'ok'){
 
             $result = [
                 'status' => '200'
