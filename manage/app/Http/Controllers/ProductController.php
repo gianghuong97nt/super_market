@@ -20,7 +20,6 @@ class ProductController extends Controller
                 var_dump($e->getMessage());
             }
         }
-
     }
     //
     public function search(Request $request){
@@ -116,8 +115,6 @@ class ProductController extends Controller
         }
 
     }
-
-
 
     // Add new product
 

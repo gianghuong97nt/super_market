@@ -5,6 +5,7 @@ $(document).ready(function () {
 });
 
 var _search = 0;
+var _page_size = 0;
 
 function initEvents() {
     $(document).on('click','#btn-search',function (e) {
@@ -29,7 +30,14 @@ function initEvents() {
     $(document).on('click', '#btn-delete', function () {
         try {
             var productid = $(this).attr('productid');
-            deleteProduct(productid);
+            $.dialogUpdate({
+                contents: JSMESSAGE.delete_confirm,
+                callback: function (confirm) {
+                    if (confirm) {
+                        deleteProduct(productid);
+                    }
+                }
+            });
         } catch (e) {
             alert('remove row ' + e.message);
         }
@@ -138,8 +146,12 @@ function deleteProduct(product_id) {
                 switch (res['status']) {
                     // Success
                     case '200':
-                        alert("Thanh cong");
-                        location.reload();
+                        $.dialogComplete({
+                            contents: JSMESSAGE.delete_complete,
+                            callback: function () {
+                                location.reload();
+                            }
+                        });
                         break;
                     // Data Validate
                     case '201':

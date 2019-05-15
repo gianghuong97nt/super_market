@@ -12,6 +12,7 @@ function init() {
     });
 }
 var resutl = "";
+
 function initEvents() {
     $(document).on('click','#save_info',function (e) {
         try {
