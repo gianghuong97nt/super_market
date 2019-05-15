@@ -84,6 +84,18 @@
                             </div>
                         </div>
                     </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
+                        <label class="form-control label-info">Số trang hiển thị</label>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <select id="page_size">
+                            <option value="4">4</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                        </select>
+                    </div>
+                </div>
                     <div id="table-result">
                         <table class="table table-bordered tbl_product">
                             <thead>

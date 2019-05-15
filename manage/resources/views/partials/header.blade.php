@@ -176,7 +176,7 @@
                 <li class="dropdown profile_details_drop">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                         <div class="profile_img">
-                            <span class="prfil-img"><img src="{{asset('asset/images/2.jpg')}} " alt=""> </span>
+                            <span class="prfil-img"><img src="{{asset('uploads/'.session('avatar'))}} " style="width: 50px; height: 50px" alt=""> </span>
                             <div class="user-name">
                                 <p>Administrator</p>
                                 <span>{{session('users')}}</span>

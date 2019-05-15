@@ -32,6 +32,15 @@ function initEvents() {
             alert('remove row ' + e.message);
         }
     });
+
+    $(document).on('change', '#page_size', function () {
+        try {
+            //$("input").trigger("select");
+            searchProduct();
+        } catch (e) {
+            alert('remove row ' + e.message);
+        }
+    });
 }
 // Tìm kiếm theo điều kiện search
 function searchProduct() {
@@ -44,9 +53,10 @@ function searchProduct() {
         var brand       =  $('#brand_search').val();
         var size        =  $('#size_search').val();
         var color       =  $('#color_search').val();
+        var page_size   =  $('#page_size').val();
 
 
-        data.page_size  = 4;
+        data.page_size  = page_size;
         data.page       = 1;
         data.id         = id;
         data.category   = category;
