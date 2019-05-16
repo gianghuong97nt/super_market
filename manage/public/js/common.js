@@ -1,4 +1,5 @@
 var _iscloseWaiting = true;
+var _searchCondition = '';
 
 $(document).ready(function() {
 	/**
@@ -65,7 +66,9 @@ $(document).ready(function() {
 	 
 
 });
-
+function back() {
+	window.history.back(1);
+}
 function callWaiting(){
 	
 }

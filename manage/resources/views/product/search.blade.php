@@ -48,8 +48,9 @@
             <td class="price_sale">{{$product['price_sale']}}</td>
             <td class="note">{{$product['note']}}</td>
             <td class="tbl_action">
+                {{--href="{{ url('/product/'.$product['id'].'/edit') }}"--}}
                 <a productID = "{{$product['id']}}" id="btn-delete" class="btn btn-danger btn-remove-row-1"><i class="fas fa-trash-alt" aria-hidden="true"></i></a>
-                <a href="{{ url('/product/'.$product['id'].'/edit') }}" class="btn btn-warning btn-update-row-1"><i class="fas fa-edit"></i></a>
+                <a proID = "{{$product['id']}}" class="btn btn-warning btn-update-row-1" id="btn_update"><i class="fas fa-edit"></i></a>
                 {{--<a href="{{'http://localhost:8005/product/edit'}}" class="btn btn-warning btn-update-row-1"><i class="fas fa-edit"></i></a>--}}
             </td>
         </tr>

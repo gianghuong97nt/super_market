@@ -68,11 +68,12 @@ class ProductController extends Controller
     }
 
     //sua san pham
-    public function edit($id){
+    public function edit(Request $request){
         if(!session('users')){
             return redirect('/login');
         }else{
-            $data   = array($id);
+
+            $data   = $request->all();
             try {
                 $product  = Dao::call_stored_procedure('[SPC_PRODUCT_INQ2]',$data);
                 return view('product.edit')
@@ -216,5 +217,6 @@ class ProductController extends Controller
         }
 
     }
+
 
 }

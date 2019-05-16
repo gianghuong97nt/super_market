@@ -42,7 +42,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <!-- chart -->
     <script src="{{ asset('js/common.js') }}"></script>
     <script src="{{ asset('js/timeout.js') }}"></script>
-    <script src="{{ asset('js/footer.js') }}"></script>
+    {{--<script src="{{ asset('js/footer.js') }}"></script>--}}
+    <script src="{{ asset('js/search.js') }}"></script>
     <!-- //chart -->
     <!--//Metis Menu -->
     <style>

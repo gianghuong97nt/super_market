@@ -20,7 +20,7 @@
         </div>
             <div class="panel-body bs-example widget-shadow" >
                 {{--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">--}}
-                <div class="form-grids row widget-shadow" >
+                <div class="form-grids row widget-shadow" id="condition_search">
                     <div class="condition">
                         <p style="color: white">Điều kiện tìm kiếm</p>
                     </div>
@@ -123,3 +123,7 @@
             </div>
     </div>
 @endsection
+
+<script>
+    _searchCondition = 'abc';
+</script>

@@ -81,7 +81,9 @@ Route::post('/product/search', 'ProductController@search')->name('product.search
 Route::post('/product/load', 'ProductController@load')->name('product.load');
 
 //Route edit san pham
-Route::get('/product/{id}/edit', 'ProductController@edit')->name('product.edit');
+//Route::get('/product/{id}/edit', 'ProductController@edit')->name('product.edit');
+Route::post('/product/edit', 'ProductController@edit')->name('product.edit');
+Route::get('/product/edit', 'ProductController@edit')->name('product.edit');
 
 
 
@@ -101,8 +103,16 @@ Route::post('/product/add', 'ProductController@add')->name('product.add');
 Route::post('/product/delete', 'ProductController@delete')->name('product.delete');
 
 
+////Back product
+//Route::post('/product/back', 'ProductController@back')->name('product.back');
+
 
 //Route Anh
 Route::post('/upload', 'UserController@uploadImage');
 
 Route::post('/deleteImage', 'UserController@deleteImage')->name('deleteImage');
+
+
+//Tim kiếm theo key
+Route::post('/search', 'SearchController@search')->name('search');
+

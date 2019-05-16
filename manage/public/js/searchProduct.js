@@ -5,6 +5,7 @@ $(document).ready(function () {
     init();
 });
 
+
 function init() {
     $(document).ready(function(){
         $('#product_id_search').focus();
@@ -14,6 +15,7 @@ function init() {
 
 var _search = 0;
 var _page_delete = 0;
+
 
 function initEvents() {
     $(document).on('click','#btn-search',function (e) {
@@ -62,7 +64,28 @@ function initEvents() {
             alert('remove row ' + e.message);
         }
     });
+
+    $(document).on('click', '#btn_update', function () {
+        try {
+            var id = $(this).attr('proID');
+            window.location.href = '/product/edit?id='+id;
+        } catch (e) {
+            alert('remove row ' + e.message);
+        }
+    });
+
+    $(document).on('click','#btn-back-edit', function (e) {
+        try {
+            $('#condition_search').empty();
+            //$('#condition_search').append(_condition);
+            // back();
+
+        } catch (e) {
+            alert('remove row ' + e.message);
+        }
+    });
 }
+
 // Tìm kiếm theo điều kiện search
 function searchProduct() {
     try {
