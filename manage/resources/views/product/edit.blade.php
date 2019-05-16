@@ -45,6 +45,11 @@
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <select class="category" id="category_update">
                                 <option value="{{$product[0]['category_id']}}">{{$product[0]['name']}}</option>
+                                @foreach($categories as $category)
+                                    @if($category['id'] != $product[0]['category_id'])
+                                        <option value="{{$category['id']}}">{{$category['name']}}</option>
+                                    @endif
+                                @endforeach
                             </select>
                         </div>
                     </div>

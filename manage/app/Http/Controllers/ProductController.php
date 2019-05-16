@@ -76,12 +76,12 @@ class ProductController extends Controller
             try {
                 $product  = Dao::call_stored_procedure('[SPC_PRODUCT_INQ2]',$data);
                 return view('product.edit')
-                    -> with('product', $product[0]);
+                    -> with('product', $product[0])
+                    -> with('categories', $product[1]);
             } catch (\Exception $e) {
                 var_dump($e->getMessage());
             }
         }
-
     }
 
     //update san pham
