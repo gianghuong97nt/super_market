@@ -59,6 +59,9 @@
     width: 48%;
 }
 
+.pagination-location{
+    margin: 0;
+}
 
 #product_id {
     width: 30%;
