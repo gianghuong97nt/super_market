@@ -43,9 +43,16 @@ class UserController extends Controller
                 $request->session()->forget('avatar');
                 $data = Dao::call_stored_procedure('[SPC_USERS_ACT02]', $param);
 
-                session([
-                    'avatar'=>$data[1][0]['avata'],
-                ]);
+                if($data[1][0]['avata'] != ''){
+                    session([
+                        'avatar'=>$data[1][0]['avata'],
+                    ]);
+                }else{
+                    session([
+                        'avatar'=>'cuc.jpg',
+                    ]);
+                }
+
                 if ($data[0][0]['Data'] == 'Exception' || $data[0][0]['Data'] == 'EXCEPTION') { //SQL Exception
                     $result = array(
                         'status' => '202',

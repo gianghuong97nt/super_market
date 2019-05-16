@@ -42,6 +42,7 @@
     height: 34px;
     border-radius: 5px;
     border-color: red;
+    padding-left: 7px ;
 }
 .form-control {
     border-radius: 5px;

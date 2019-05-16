@@ -105,7 +105,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div style="" id="avatar">
-                                <img style="width: 100%; height: 100%; margin-left: 0px" id="preview_image" src="{{isset($user[0]['avata'])&&$user[0]['avata']!=''?'uploads/'.$user[0]['avata']:'uploads/cuc1.jpg'}}" />
+                                <img style="width: 100%; height: 100%; margin-left: 0px" id="preview_image" src="{{isset($user[0]['avata'])&&$user[0]['avata']!=''?'uploads/'.$user[0]['avata']:'uploads/cuc.jpg'}}" />
                                 <i id="loading" class="fa fa-spinner fa-spin fa-3x fa-fw" style="position: absolute;left: 40%;top: 40%;display: none"></i>
                             </div>
                             <p>
