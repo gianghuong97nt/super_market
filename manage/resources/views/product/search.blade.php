@@ -10,7 +10,7 @@
         </select>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-        <div class="mt-15 panel-footer-search pull-right pagination_product"  style="margin: 0 ; float: right" id="loadProduct">
+        <div class="mt-15 panel-footer-search pull-right pagination_product"  id="loadProduct">
             {!!Paging::show($paging,0)!!}
         </div>
     </div>
