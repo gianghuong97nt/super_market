@@ -4,6 +4,7 @@ $(document).ready(function () {
     init();
     initEvents();
 });
+var result = '';
 
 function init() {
     $('#product_name_update').focus();
@@ -13,20 +14,61 @@ function initEvents() {
     $(document).on('click','#btn-update',function (e) {
         try {
             e.preventDefault();
-            $.dialogUpdate({
-                contents: JSMESSAGE.save_confirm,
-                callback: function (confirm) {
-                    if (confirm) {
-                        updateProduct();
+            validate();
+            if(result == 'ok'){
+                $.dialogUpdate({
+                    contents: JSMESSAGE.save_confirm,
+                    callback: function (confirm) {
+                        if (confirm) {
+                            updateProduct();
+                        }
                     }
-                }
+                });
+            }
+        } catch (e) {
+            alert('Detail' + e.message);
+        }
+
+    });
+    $(document).on('click','#product_name_update',function (e) {
+        try {
+            e.preventDefault();
+            $("input").keypress(function(){
+                $("#invalid_product_name").addClass('display_view');
             });
 
         } catch (e) {
-            alert('searchProduct' + e.message);
+            alert('nhập email' + e.message);
         }
     });
 
+    $(document).on('change','#category_update',function (e) {
+        try {
+            e.preventDefault();
+            $("#invalid_category").addClass('display_view');
+
+        } catch (e) {
+            alert('nhập email' + e.message);
+        }
+    });
+
+}
+
+function validate() {
+    if($('#product_name_update').val() == "" || $('#category_update').val() == 0){
+
+        if($('#product_name_update').val() == ""){
+            $("#invalid_product_name").removeClass('display_view');
+            $("#invalid_product_name").html("Item sản phẩm không được bỏ trống");
+        }
+        if($('#category_update').val() == 0){
+            $("#invalid_category").removeClass('display_view');
+            $("#invalid_category").html("Item sản phẩm không được bỏ trống");
+        }
+        result = 'fail';
+    }else{
+        result = 'ok';
+    }
 }
 
 //Phan trang

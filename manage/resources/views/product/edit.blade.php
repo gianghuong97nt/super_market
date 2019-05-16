@@ -35,6 +35,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <input type="text" class="form-control" id="product_name_update" value="{{$product[0]['product_name']}}" maxlength="20"/>
+                            <span class="error display_view" id="invalid_product_name"></span>
                         </div>
                     </div>
                     <div class="row">
@@ -46,6 +47,9 @@
                                 <option value="{{$product[0]['category_id']}}">{{$product[0]['name']}}</option>
                             </select>
                         </div>
+                    </div>
+                    <div>
+                        <span  style="margin-left: 225px" class="error display_view d-inline" id="invalid_category"></span>
                     </div>
                     <div class="row">
                         <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">

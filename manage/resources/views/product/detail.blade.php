@@ -50,8 +50,12 @@
                                     <option value="{{$category['category_id']}}">{{$category['name']}}</option>
                                 @endforeach
                             </select>
-                            <span class="error display_view" id="invalid_category"></span>
+
                         </div>
+
+                    </div>
+                    <div>
+                        <span  style="margin-left: 225px" class="error display_view d-inline" id="invalid_category"></span>
                     </div>
 
                     <div class="row">
