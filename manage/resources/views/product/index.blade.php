@@ -20,102 +20,102 @@
         </div>
             <div class="panel-body bs-example widget-shadow" >
                 {{--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">--}}
-                    <div class="form-grids row widget-shadow" >
-                        <div class="condition">
-                            <p style="color: white">Điều kiện tìm kiếm</p>
+                <div class="form-grids row widget-shadow" >
+                    <div class="condition">
+                        <p style="color: white">Điều kiện tìm kiếm</p>
+                    </div>
+                    <div class="form-body">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
+                                <label class="form-control label-info">Mã sản phẩm</label>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <input type="number"  class="form-control" id="product_id_search" />
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
+                                <label class="form-control label-info">Hãng</label>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" class="form-control" id="brand_search" maxlength="20"/>
+                            </div>
+
                         </div>
-                        <div class="form-body">
-                            <div class="row">
-                                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-                                    <label class="form-control label-info">Mã sản phẩm</label>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="number"  class="form-control" id="product_id_search" />
-                                </div>
-                                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-                                    <label class="form-control label-info">Hãng</label>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" class="form-control" id="brand_search" maxlength="20"/>
-                                </div>
 
+                        <div class="row">
+                            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
+                                <label class="form-control label-info">Danh mục</label>
                             </div>
-
-                            <div class="row">
-                                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-                                    <label class="form-control label-info">Danh mục</label>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                    <select id="category_search">
-                                        <option value="0"></option>
-                                        @foreach($categories as $category )
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <select id="category_search">
+                                    <option value="0"></option>
+                                    @foreach($categories as $category )
                                         <option value="{{$category['category_id']}}">{{$category['name']}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-                                    <label class="form-control label-info">Cỡ</label>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" class="form-control" id="size_search" maxlength="20"/>
-                                </div>
+                                    @endforeach
+                                </select>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-                                    <label class="form-control label-info">Tên sản phẩm</label>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" class="form-control" id="product_name_search" maxlength="20"/>
-                                </div>
-                                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-                                    <label class="form-control label-info">Màu sắc</label>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" class="form-control" id="color_search" maxlength="20"/>
-                                </div>
+                            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
+                                <label class="form-control label-info">Cỡ</label>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-                                    <label class="form-control label-info">Nhà cung cấp</label>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" class="form-control" id="supplier_search" maxlength="20"/>
-                                </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" class="form-control" id="size_search" maxlength="20"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
+                                <label class="form-control label-info">Tên sản phẩm</label>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" class="form-control" id="product_name_search" maxlength="20"/>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
+                                <label class="form-control label-info">Màu sắc</label>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" class="form-control" id="color_search" maxlength="20"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
+                                <label class="form-control label-info">Nhà cung cấp</label>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" class="form-control" id="supplier_search" maxlength="20"/>
                             </div>
                         </div>
                     </div>
+                </div>
                 <div class="row">
                     <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
                         <label class="form-control label-info">Số trang hiển thị</label>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <select id="page_size">
-                            <option value="5" >5</option>
+                            <option value="5" style="text-align: center">5</option>
                             <option value="15">15</option>
                             <option value="20">20</option>
                         </select>
                     </div>
                 </div>
-                    <div id="table-result">
-                        <table class="table table-bordered tbl_product">
-                            <thead>
-                            <tr class="product">
-                                <th>Mã </th>
-                                <th>Tên SP </th>
-                                <th>Danh mục</th>
-                                <th>Hãng</th>
-                                <th>Nhà CC</th>
-                                <th>SL </th>
-                                <th>Màu</th>
-                                <th>Cỡ</th>
-                                <th>Giá nhập</th>
-                                <th>Giá bán</th>
-                                <th>Note</th>
-                                <th class="action"><a class="btn btn-primary" id="btn-add-row-1" href="{{url('/product/detail')}}"><i class="fa fa-plus" aria-hidden="true"></i></a></th>
-                            </tr>
-                            </thead>
-                        </table>
-                    </div>
+                <div id="table-result">
+                    <table class="table table-bordered tbl_product">
+                        <thead>
+                        <tr class="product">
+                            <th>Mã </th>
+                            <th>Tên SP </th>
+                            <th>Danh mục</th>
+                            <th>Hãng</th>
+                            <th>Nhà CC</th>
+                            <th>SL </th>
+                            <th>Màu</th>
+                            <th>Cỡ</th>
+                            <th>Giá nhập</th>
+                            <th>Giá bán</th>
+                            <th>Note</th>
+                            <th class="action"><a class="btn btn-primary" id="btn-add-row-1" href="{{url('/product/detail')}}"><i class="fa fa-plus" aria-hidden="true"></i></a></th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
             </div>
     </div>
 @endsection

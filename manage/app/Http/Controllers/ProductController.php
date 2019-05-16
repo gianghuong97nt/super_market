@@ -30,9 +30,17 @@ class ProductController extends Controller
         }else{
             try {
                 $product  = Dao::call_stored_procedure('SPC_PRODUCT_FND01',$params);
-                return view('product.search')
-                    -> with('products', $product[0])
-                    -> with('paging', $product[1][0]);
+
+                if($product[1][0]['totalRecord'] != 0){
+                    return view('product.search')
+                        -> with('products', $product[0])
+                        -> with('paging', $product[1][0]);
+                }else{
+                    return view('product.not_result');
+                }
+
+
+
             } catch (\Exception $e) {
                 var_dump($e->getMessage());
             }

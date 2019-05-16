@@ -77,6 +77,7 @@ function searchProduct() {
         var page_size   =  $('#page_size').val();
 
 
+
         data.page_size  = page_size;
         data.page       = 1;
         data.id         = id;

@@ -1,4 +1,3 @@
-
 <table class="table table-bordered tbl_product">
     <thead>
         <tr class="product">

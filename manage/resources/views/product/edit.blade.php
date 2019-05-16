@@ -100,7 +100,7 @@
                             <label class="form-control label-info">Giá bán</label>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <input type="number" min="0" max="900000000" step="100000" class="form-control" id="price_sale_update" value="{{$product[0]['price_sale']}}"/>
+                            <input type="number" min="0" max="900000000" step="100000"                                                                                                                    class="form-control" id="price_sale_update" value="{{$product[0]['price_sale']}}"/>
                         </div>
                     </div>
                     <div class="row">
