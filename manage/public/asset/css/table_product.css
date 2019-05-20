@@ -64,5 +64,10 @@ th {
     text-align: center;
     min-width: 100px;
 }
+.quantity, .price_sale, .price_core, .id{
+    text-align: center;
+}
+
+
 
 

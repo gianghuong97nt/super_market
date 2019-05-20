@@ -36,7 +36,7 @@
     <tbody>
     @foreach($products as $product)
         <tr>
-            <td class="tbl_id" scope="row">{{$product['id']}}</td>
+            <td class="id" scope="row">{{$product['id']}}</td>
             <td class="product_name">{{$product['name']}}</td>
             <td class="category">{{$product['category_name']}}</td>
             <td class="brand">{{$product['brand']}}</td>
