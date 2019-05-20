@@ -3,6 +3,7 @@
 $(document).ready(function () {
     initEvents();
     init();
+    back();
 });
 
 
@@ -16,6 +17,29 @@ function init() {
 var _search = 0;
 var _page_delete = 0;
 
+function back() {
+
+    if(sessionStorage.getItem("product_id") != null){
+        $('#product_id_search').val(sessionStorage.getItem("product_id"));
+        $('#category_search').val(sessionStorage.getItem("category_search"));
+        $('#product_name_search').val(sessionStorage.getItem("product_name_search"));
+        $('#supplier_search').val(sessionStorage.getItem("supplier_search"));
+        $('#brand_search').val(sessionStorage.getItem("brand_search"));
+        $('#size_search').val(sessionStorage.getItem("size_search"));
+        $('#color_search').val(sessionStorage.getItem("color_search"));
+
+        searchProduct();
+
+        sessionStorage.removeItem('product_id');
+        sessionStorage.removeItem('category_search');
+        sessionStorage.removeItem('product_name_search');
+        sessionStorage.removeItem('supplier_search');
+        sessionStorage.removeItem('brand_search');
+        sessionStorage.removeItem('size_search');
+        sessionStorage.removeItem('color_search');
+
+    }
+}
 
 function initEvents() {
     $(document).on('click','#btn-search',function (e) {
@@ -67,6 +91,14 @@ function initEvents() {
 
     $(document).on('click', '#btn_update', function () {
         try {
+            sessionStorage.setItem("product_id",$('#product_id_search').val());
+            sessionStorage.setItem("category_search",$('#category_search').val());
+            sessionStorage.setItem("product_name_search",$('#product_name_search').val());
+            sessionStorage.setItem("supplier_search",$('#supplier_search').val());
+            sessionStorage.setItem("brand_search",$('#brand_search').val());
+            sessionStorage.setItem("size_search",$('#size_search').val());
+            sessionStorage.setItem("color_search",$('#color_search').val());
+
             var id = $(this).attr('proID');
             window.location.href = '/product/edit?id='+id;
         } catch (e) {
@@ -74,16 +106,6 @@ function initEvents() {
         }
     });
 
-    $(document).on('click','#btn-back-edit', function (e) {
-        try {
-            $('#condition_search').empty();
-            //$('#condition_search').append(_condition);
-            // back();
-
-        } catch (e) {
-            alert('remove row ' + e.message);
-        }
-    });
 }
 
 // Tìm kiếm theo điều kiện search
@@ -121,9 +143,11 @@ function searchProduct() {
             //data: data,
             ///
             success: function (res) {
+
                 _search = 1;
                 $('#table-result').empty();
                 $('#table-result').append(res);
+                $('#page_size').val(page_size);
             }
         });
     } catch (e) {

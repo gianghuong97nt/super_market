@@ -52,6 +52,14 @@ function initEvents() {
         }
     });
 
+    $(document).on('click','#btn-back-edit', function (e) {
+        try {
+            window.location.href = '/product';
+        } catch (e) {
+            alert('remove row ' + e.message);
+        }
+    });
+
 }
 
 function validate() {

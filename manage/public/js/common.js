@@ -1,5 +1,6 @@
 var _iscloseWaiting = true;
 var _searchCondition = '';
+var _count_edit = 0;
 
 $(document).ready(function() {
 	/**
