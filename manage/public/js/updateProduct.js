@@ -60,6 +60,22 @@ function initEvents() {
         }
     });
 
+    $(document).on('keypress','input', function (e) {
+        if(e.which === 13){
+            validate();
+            if(result == 'ok'){
+                $.dialogUpdate({
+                    contents: JSMESSAGE.save_confirm,
+                    callback: function (confirm) {
+                        if (confirm) {
+                            updateProduct();
+                        }
+                    }
+                });
+            }
+        }
+    });
+
 }
 
 function validate() {
@@ -68,12 +84,15 @@ function validate() {
         if($('#product_name_update').val() == ""){
             $("#invalid_product_name").removeClass('display_view');
             $("#invalid_product_name").html("Item sản phẩm không được bỏ trống");
+            $('#product_name_update').focus();
+            result = 'fail';
         }
         if($('#category_update').val() == 0){
             $("#invalid_category").removeClass('display_view');
             $("#invalid_category").html("Item sản phẩm không được bỏ trống");
+            result = 'fail';
         }
-        result = 'fail';
+
     }else{
         result = 'ok';
     }

@@ -15,7 +15,7 @@
                 <h2 class="title1">Thông tin cá nhân</h2>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 btn-btn d-inline">
-                <a href="{{'http://localhost:8005'}}"><button type="button" class="btn btn-success btn-2 btn-back">Back</button></a>
+                <a><button type="button" class="btn btn-success btn-2 btn-back btn-back-info">Back</button></a>
                 <button type="button" class="btn btn-success btn-2" id="save_info" name="btn-save-info">Save</button>
             </div>
         </div>

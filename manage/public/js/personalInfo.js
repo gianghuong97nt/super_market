@@ -109,6 +109,31 @@ function initEvents() {
         }
     });
 
+    $(document).on('click','.btn-back-info',function (e) {
+        try {
+            window.location.href = '/';
+
+        } catch (e) {
+            alert('nhập email' + e.message);
+        }
+    });
+    $(document).on('keypress','input', function (e) {
+        if(e.which === 13){
+            validate();
+            if(resutl == 'ok'){
+                $.dialogUpdate({
+                    contents: JSMESSAGE.save_confirm,
+                    callback: function (confirm) {
+                        if (confirm) {
+                            personalInfo();
+                        }
+                    }
+                });
+                $("#invalid_email").addClass('display_view');
+            }
+        }
+    });
+
     $.ajaxSetup({
         headers: {
             'X-CSSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -127,16 +152,24 @@ function validate() {
                 $("#invalid_email").removeClass('display_view');
                 $("#invalid_email").html("Bạn nhập sai định dạng email. Mời nhập lại");
             }
+            $('#email').focus();
             resutl = 'fail';
         }
         if($('#passwordInfo').val() == ""){
             $("#invalid_password").removeClass('display_view');
             $("#invalid_password").html("Bạn nhập chưa nhập mật khẩu. Mời nhập lại");
+
+            if(resutl == ''){
+                $('#passwordInfo').focus();
+            }
             resutl = 'fail';
         }
         if($('#repassword').val() == ""){
             $("#invalid_repassword").removeClass('display_view');
             $("#invalid_repassword").html("Bạn nhập chưa xac nhan mật khẩu. Mời nhập lại");
+            if(resutl == ''){
+                $('#repassword').focus();
+            }
             resutl = 'fail';
         }
 

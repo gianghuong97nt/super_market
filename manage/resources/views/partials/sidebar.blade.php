@@ -9,13 +9,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <h1><a class="navbar-brand" href="#"><span class="fa fa-area-chart"></span> Manage<span class="dashboard_text">Super market</span></a></h1>
+                <h1><a class="navbar-brand" href="{{'http://localhost:8005/'}}"><span class="fa fa-area-chart"></span> Manage<span class="dashboard_text">Super market</span></a></h1>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="sidebar-menu">
                     <li class="header">MAIN MANAGE</li>
                     <li class="treeview">
-                        <a href="#">
+                        <a href="{{'http://localhost:8005/'}}">
                             <i class="fa fa-laptop"></i>
                             <span>Quản lý sản phẩm</span>
                             <i class="fa fa-angle-left pull-right"></i>
