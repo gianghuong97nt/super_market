@@ -7,6 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
+    @yield('title')
     @include('partials.head')
     @yield('link')
 </head>

@@ -1,5 +1,7 @@
 @extends('layouts.glance')
-
+@section('title')
+    <title>Thông tin cá nhân</title>
+@endsection
 @section('link')
     <link href="{{asset('asset/css/form_info_personal.css')}}" rel='stylesheet' type='text/css' />
 @endsection

@@ -1,5 +1,7 @@
 @extends('layouts.glance')
-
+@section('title')
+    <title>Sửa sản phẩm</title>
+@endsection
 @section('link')
     <link href="{{asset('asset/css/edit_pro.css')}}" rel='stylesheet' type='text/css' />
 @endsection
