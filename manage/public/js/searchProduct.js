@@ -106,7 +106,7 @@ function initEvents() {
         }
     });
 
-    $(document).on('keypress','input', function (e) {
+    $(document).on('keypress','.form-control', function (e) {
         if(e.which === 13){
             searchProduct();
         }

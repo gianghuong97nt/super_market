@@ -6,6 +6,8 @@ $(document).ready(function () {
 });
 
 var result = "";
+var _fail = "fail";
+var _true = "ok";
 
 function init() {
     $('#product_name').focus();
@@ -16,7 +18,7 @@ function initEvents() {
         try {
             e.preventDefault();
             validate();
-            if(result == 'ok'){
+            if(result == _true){
                 $.dialogUpdate({
                     contents: JSMESSAGE.save_confirm,
                     callback: function (confirm) {
@@ -53,10 +55,10 @@ function initEvents() {
         }
     });
 
-    $(document).on('keypress','input', function (e) {
+    $(document).on('keypress','.form-control', function (e) {
         if(e.which === 13){
             validate();
-            if(result == 'ok'){
+            if(result == _true){
                 $.dialogUpdate({
                     contents: JSMESSAGE.save_confirm,
                     callback: function (confirm) {
@@ -75,18 +77,18 @@ function validate() {
 
         if($('#product_name').val() == ""){
             $("#invalid_product_name").removeClass('display_view');
-            $("#invalid_product_name").html("Item sản phẩm không được bỏ trống");
+            $("#invalid_product_name").html("Không được bỏ trống");
             $('#product_name').focus();
-            result = 'fail';
+            result = _fail;
         }
         if($('#category').val() == 0){
             $("#invalid_category").removeClass('display_view');
-            $("#invalid_category").html("Item sản phẩm không được bỏ trống");
-            result = 'fail';
+            $("#invalid_category").html("Không được bỏ trống");
+            result = _fail;
         }
 
     }else{
-        result = 'ok';
+        result = _true;
     }
 }
 

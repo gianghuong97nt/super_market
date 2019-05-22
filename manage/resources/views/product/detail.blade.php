@@ -57,7 +57,7 @@
 
                     </div>
                     <div>
-                        <span  style="margin-left: 225px" class="error display_view d-inline" id="invalid_category"></span>
+                        <span  style="margin-left: 185px" class="error display_view d-inline" id="invalid_category"></span>
                     </div>
 
                     <div class="row">

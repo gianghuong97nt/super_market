@@ -129,8 +129,3 @@
     </div>
 
 @endsection
-
-
-<script>
-    _searchCondition = 'abc';
-</script>

@@ -12,13 +12,15 @@ function init() {
     });
 }
 var resutl = "";
+var _fail = "fail";
+var _true = "ok";
 
 function initEvents() {
     $(document).on('click','#save_info',function (e) {
         try {
             e.preventDefault();
             validate();
-            if(resutl == 'ok'){
+            if(resutl == _true){
                 $.dialogUpdate({
                     contents: JSMESSAGE.save_confirm,
                     callback: function (confirm) {
@@ -42,11 +44,11 @@ function initEvents() {
             }
             else if($('#email').val() == ""){
                 $("#invalid_email").removeClass('display_view');
-                $("#invalid_email").html("Bạn nhập chưa nhập email. Mời nhập lại");
+                $("#invalid_email").html("Không được để trống");
             }
             else{
                 $("#invalid_email").removeClass('display_view');
-                $("#invalid_email").html("Bạn nhập sai định dạng email. Mời nhập lại");
+                $("#invalid_email").html("Nhập sai định dạng email");
             }
         } catch (e) {
             alert('nhập email' + e.message);
@@ -80,7 +82,7 @@ function initEvents() {
             e.preventDefault();
             if($('#passwordInfo').val() == ""){
                 $("#invalid_password").removeClass('display_view');
-                $("#invalid_password").html("Bạn nhập chưa nhập mật khẩu. Mời nhập lại");
+                $("#invalid_password").html("Không được để trống");
             }
         } catch (e) {
             alert('nhập email' + e.message);
@@ -102,7 +104,7 @@ function initEvents() {
             e.preventDefault();
             if($('#repassword').val() == ""){
                 $("#invalid_repassword").removeClass('display_view');
-                $("#invalid_repassword").html("Bạn nhập chưa xác nhận mật khẩu. Mời nhập lại");
+                $("#invalid_repassword").html("Không được để trống");
             }
         } catch (e) {
             alert('nhập email' + e.message);
@@ -117,10 +119,10 @@ function initEvents() {
             alert('nhập email' + e.message);
         }
     });
-    $(document).on('keypress','input', function (e) {
+    $(document).on('keypress','.form-control', function (e) {
         if(e.which === 13){
             validate();
-            if(resutl == 'ok'){
+            if(resutl == _true){
                 $.dialogUpdate({
                     contents: JSMESSAGE.save_confirm,
                     callback: function (confirm) {
@@ -147,39 +149,39 @@ function validate() {
         if(!isEmail($('#email').val())){
             if($('#email').val() == ""){
                 $("#invalid_email").removeClass('display_view');
-                $("#invalid_email").html("Bạn nhập chưa nhập email. Mời nhập lại");
+                $("#invalid_email").html("Không được bỏ trống");
             }else{
                 $("#invalid_email").removeClass('display_view');
-                $("#invalid_email").html("Bạn nhập sai định dạng email. Mời nhập lại");
+                $("#invalid_email").html("Nhập sai định dạng email");
             }
             $('#email').focus();
-            resutl = 'fail';
+            resutl = _fail;
         }
         if($('#passwordInfo').val() == ""){
             $("#invalid_password").removeClass('display_view');
-            $("#invalid_password").html("Bạn nhập chưa nhập mật khẩu. Mời nhập lại");
+            $("#invalid_password").html("Không được bỏ trống");
 
             if(resutl == ''){
                 $('#passwordInfo').focus();
             }
-            resutl = 'fail';
+            resutl = _fail;
         }
         if($('#repassword').val() == ""){
             $("#invalid_repassword").removeClass('display_view');
-            $("#invalid_repassword").html("Bạn nhập chưa xac nhan mật khẩu. Mời nhập lại");
+            $("#invalid_repassword").html("Không được bỏ trống");
             if(resutl == ''){
                 $('#repassword').focus();
             }
-            resutl = 'fail';
+            resutl = _fail;
         }
 
     }else{
         if($('#passwordInfo').val() != $('#repassword').val()){
             $("#invalid_repassword").removeClass('display_view');
-            $("#invalid_repassword").html("Mật khẩu không khớp. Mời nhập lại");
-            resutl = 'fail';
+            $("#invalid_repassword").html("Mật khẩu không khớp. Nhập lại");
+            resutl = _fail;
         }else{
-            resutl = 'ok';
+            resutl = _true;
         }
     }
 }

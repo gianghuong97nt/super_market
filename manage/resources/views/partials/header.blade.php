@@ -187,8 +187,8 @@
                         </div>
                     </a>
                     <ul class="dropdown-menu drp-mnu">
-                        <li> <a href="{{'/personalInfo'}}"><i class="fa fa-suitcase"></i> Personal Imformation</a> </li>
-                        <li> <a href="{{'/logout'}}"><i class="fa fa-sign-out"></i> Logout</a> </li>
+                        <li> <a href="{{'/personalInfo'}}"><i class="fa fa-suitcase"></i> Thông tin cá nhân</a> </li>
+                        <li> <a href="{{'/logout'}}"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a> </li>
                     </ul>
                 </li>
             </ul>

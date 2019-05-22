@@ -21,32 +21,19 @@
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Danh mục sản phẩm</a></li>
                             <li><a href="{{'/product'}}"><i class="fa fa-angle-right"></i> Danh sách sản phẩm</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Đánh giá</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Khách hàng</a></li>
                         </ul>
                     </li>
 
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                            <span>Đặt hàng</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Giỏ hàng</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Đặt hàng</a></li>
-                        </ul>
-                    </li>
+
                     <li class="treeview">
                         <a href="#">
                             <i class="fa fa-book" aria-hidden="true"></i>
-                            <span>Đơn hàng</span>
+                            <span>Administrator</span>
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Danh sách đơn hàng</a></li>
+                            <li><a href="{{'/personalInfo'}}"><i class="fa fa-angle-right"></i>Thông tin cá nhân </a></li>
                         </ul>
                     </li>
 
