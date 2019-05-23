@@ -96,6 +96,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <select class="form-control" id="gender">
+                                <option value="2"></option>
                                 <option {{$user[0]['gender']==0?'selected':''}} value="0">Male</option>
                                 <option {{$user[0]['gender']==1?'selected':''}} value="1">Female</option>
                             </select>
@@ -120,7 +121,7 @@
                                 </a>
                             </p>
                             <input type="file" id="file" style="display: none"/>
-                            <input type="hidden" id="file_name"/>
+                            <input type="hidden" id="file_name" value="{{$user[0]['avata']}}"/>
                         </div>
 
                     </div>

@@ -85,13 +85,13 @@ function validate() {
 
         if($('#product_name_update').val() == ""){
             $("#invalid_product_name").removeClass('display_view');
-            $("#invalid_product_name").html("Item sản phẩm không được bỏ trống");
+            $("#invalid_product_name").html("Không được bỏ trống");
             $('#product_name_update').focus();
             result = _fail;
         }
         if($('#category_update').val() == 0){
             $("#invalid_category").removeClass('display_view');
-            $("#invalid_category").html("Item sản phẩm không được bỏ trống");
+            $("#invalid_category").html("Không được bỏ trống");
             result = _fail;
         }
 
@@ -100,35 +100,23 @@ function validate() {
     }
 }
 
-//Phan trang
+//Update product
 
 function updateProduct() {
     try {
         var data = {};
-        var id          =  $('#product_id_update').val();
-        var category    =  $('#category_update').val();
-        var name        =  $('#product_name_update').val();
-        var supplier    =  $('#supplier_update').val();
-        var brand       =  $('#brand_update').val();
-        var size        =  $('#size_update').val();
-        var color       =  $('#color_update').val();
-        var quantity    =  $('#quantity_update').val();
-        var price_core  =  $('#price_core_update').val();
-        var price_sale  =  $('#price_sale_update').val();
-        var note        =  $('#note_update').val();
 
-
-        data.id         = id;
-        data.name       = name;
-        data.category   = category;
-        data.supplier   = supplier;
-        data.brand      = brand;
-        data.color      = color;
-        data.size       = size;
-        data.quantity   = quantity;
-        data.price_core = price_core;
-        data.price_sale = price_sale;
-        data.note       = note;
+        data.id         = $('#product_id_update').val();
+        data.name       = $('#product_name_update').val();
+        data.category   = $('#category_update').val();
+        data.supplier   = $('#supplier_update').val();
+        data.brand      = $('#brand_update').val();
+        data.color      = $('#color_update').val();
+        data.size       = $('#size_update').val();
+        data.quantity   = $('#quantity_update').val();
+        data.price_core = $('#price_core_update').val();
+        data.price_sale = $('#price_sale_update').val();
+        data.note       = $('#note_update').val();
 
         $.ajax({
             type: 'POST',

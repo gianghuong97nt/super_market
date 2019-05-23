@@ -189,27 +189,22 @@ function validate() {
 function personalInfo() {
     try {
         var data = {};
-        var id         =  $('#userID').val();
-        var username   =  $('#userName').val();
-        var email      =  $('#email').val();
-        var phone      =  $('#phone').val();
-        var birthday   =  $('#birthday').val();
-        var password   =  $('#passwordInfo').val();
-        //var repassword =  $('#repassword').val();
-        var address    =  $('#address').val();
-        var gender     =  $('#gender').val();
         var avatar     =  $('#file_name').val();
 
+        if(avatar == ''){
+            avatar = 'cuc.jpg';
+        }
 
 
-        data.id = id;
-        data.username = username;
-        data.email = email;
-        data.phone = phone;
-        data.birthday = birthday;
-        data.password = password;
-        data.address = address;
-        data.gender = gender;
+
+        data.id = $('#userID').val();
+        data.username = $('#userName').val();
+        data.email = $('#email').val();
+        data.phone = $('#phone').val();
+        data.birthday = $('#birthday').val();
+        data.password = $('#passwordInfo').val();
+        data.address = $('#address').val();
+        data.gender =  $('#gender').val();
         data.avatar = avatar;
 
 

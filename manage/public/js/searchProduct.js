@@ -111,34 +111,24 @@ function initEvents() {
             searchProduct();
         }
     });
-
-
 }
 
 // Tìm kiếm theo điều kiện search
 function searchProduct() {
     try {
         var data = {};
-        var id          =  $('#product_id_search').val();
-        var category    =  $('#category_search').val();
-        var name        =  $('#product_name_search').val();
-        var supplier    =  $('#supplier_search').val();
-        var brand       =  $('#brand_search').val();
-        var size        =  $('#size_search').val();
-        var color       =  $('#color_search').val();
         var page_size   =  $('#page_size').val();
-
 
 
         data.page_size  = page_size;
         data.page       = 1;
-        data.id         = id;
-        data.category   = category;
-        data.name       = name;
-        data.supplier   = supplier;
-        data.brand      = brand;
-        data.size       = size;
-        data.color      = color;
+        data.id         = $('#product_id_search').val();
+        data.category   = $('#category_search').val();
+        data.name       = $('#product_name_search').val();
+        data.supplier   = $('#supplier_search').val();
+        data.brand      = $('#brand_search').val();
+        data.size       =  $('#size_search').val();
+        data.color      = $('#color_search').val();
 
         //
         $.ajax({
@@ -147,10 +137,8 @@ function searchProduct() {
             dataType: 'html',  //html
             loading: true,
             data: JSON.stringify(data),
-            //data: data,
-            ///
-            success: function (res) {
 
+            success: function (res) {
                 _search = 1;
                 $('#table-result').empty();
                 $('#table-result').append(res);
@@ -168,25 +156,19 @@ function searchProduct() {
 function loadProduct(page) {
     try {
         var data = {};
-        var id          =  $('#product_id_search').val();
-        var category    =  $('#category_search').val();
-        var name        =  $('#product_name_search').val();
-        var supplier    =  $('#supplier_search').val();
-        var brand       =  $('#brand_search').val();
-        var size        =  $('#size_search').val();
-        var color       =  $('#color_search').val();
         var page_size   =  $('#page_size').val();
+
 
 
         data.page_size  = page_size;
         data.page       = page;
-        data.id         = id;
-        data.category   = category;
-        data.name       = name;
-        data.supplier   = supplier;
-        data.brand      = brand;
-        data.size       = size;
-        data.color      = color;
+        data.id         =  $('#product_id_search').val();
+        data.category   =  $('#category_search').val();
+        data.name       = $('#product_name_search').val();
+        data.supplier   = $('#supplier_search').val();
+        data.brand      = $('#brand_search').val();
+        data.size       = $('#size_search').val();
+        data.color      = $('#color_search').val();
 
 
         $.ajax({
@@ -199,6 +181,7 @@ function loadProduct(page) {
             success: function (res) {
                 $('#table-result').empty();
                 $('#table-result').append(res);
+                $('#page_size').val(page_size);
 
             },
             // Ajax error
@@ -215,25 +198,18 @@ function loadProduct(page) {
 function loadProductAfterDelete() {
     try {
         var data = {};
-        var id          =  $('#product_id_search').val();
-        var category    =  $('#category_search').val();
-        var name        =  $('#product_name_search').val();
-        var supplier    =  $('#supplier_search').val();
-        var brand       =  $('#brand_search').val();
-        var size        =  $('#size_search').val();
-        var color       =  $('#color_search').val();
         var page_size   =  $('#page_size').val();
 
 
         data.page_size  = page_size;
         data.page       = _page_delete;
-        data.id         = id;
-        data.category   = category;
-        data.name       = name;
-        data.supplier   = supplier;
-        data.brand      = brand;
-        data.size       = size;
-        data.color      = color;
+        data.id         = $('#product_id_search').val();
+        data.category   = $('#category_search').val();
+        data.name       = $('#product_name_search').val();
+        data.supplier   = $('#supplier_search').val();
+        data.brand      = $('#brand_search').val();
+        data.size       = $('#size_search').val();
+        data.color      = $('#color_search').val();
 
 
         $.ajax({

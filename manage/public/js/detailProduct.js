@@ -95,31 +95,18 @@ function validate() {
 function addProduct() {
     try {
         var data = {};
-        var id          =  $('#product_id').val();
-        var category    =  $('#category').val();
-        var name        =  $('#product_name').val();
-        var supplier    =  $('#supplier').val();
-        var brand       =  $('#brand').val();
-        var size        =  $('#size').val();
-        var color       =  $('#color').val();
-        var quantity    =  $('#quantity').val();
-        var price_core  =  $('#price_core').val();
-        var price_sale  =  $('#price_sale').val();
-        var note        =  $('#note').val();
 
-
-        data.id         = id;
-        data.name       = name;
-        data.category   = category;
-        data.supplier   = supplier;
-        data.brand      = brand;
-        data.color      = color;
-        data.size       = size;
-        data.quantity   = quantity;
-        data.price_core = price_core;
-        data.price_sale = price_sale;
-        data.note       = note;
-
+        data.id         = $('#product_id').val();
+        data.name       = $('#product_name').val();
+        data.category   = $('#category').val();
+        data.supplier   = $('#supplier').val();
+        data.brand      = $('#brand').val();
+        data.color      = $('#color').val();
+        data.size       = $('#size').val();
+        data.quantity   = $('#quantity').val();
+        data.price_core = $('#price_core').val();
+        data.price_sale = $('#price_sale').val();
+        data.note       = $('#note').val();
 
         $.ajax({
             type: 'POST',
