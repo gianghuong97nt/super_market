@@ -17,7 +17,7 @@ function inti() {
         if(count % 2 == 0){
             document.getElementById("footer").style.marginLeft = "230px";
         }else{
-            document.getElementById("footer").style.marginLeft = "-200px";
+            document.getElementById("footer").style.marginLeft = "-115px";
         }
         count ++;
     });
