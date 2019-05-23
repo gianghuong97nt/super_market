@@ -30,7 +30,6 @@ function deleteProduct(product_id) {
     try {
         var data = {};
         data.product_id = product_id;
-        alert(product_id);
 
         $.ajax({
             type: 'POST',
@@ -54,11 +53,21 @@ function deleteProduct(product_id) {
                         break;
                     // Data Validate
                     case '201':
-                        alert("Loi 201");
+                        $.dialogComplete({
+                            contents: JSMESSAGE.add_error,
+                            callback: function () {
+                                location.reload();
+                            }
+                        });
                         break;
                     // SQL + PHP Exception
                     case '202':
-                        alert("Loi 202");
+                        $.dialogComplete({
+                            contents: JSMESSAGE.add_error,
+                            callback: function () {
+                                location.reload();
+                            }
+                        });
                         break;
                     default:
                         break;

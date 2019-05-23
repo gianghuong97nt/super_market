@@ -12,11 +12,11 @@ function initEvents() {
 
                 if($('#username').val() == ""){
                     $("#invalid_username").removeClass('display_view');
-                    $("#invalid_username").html("Bạn nhập chưa nhập username. Mời nhập lại");
+                    $("#invalid_username").html("Không được để trống");
                 }
-                else if($('#password').val() == ""){
+                if($('#password').val() == ""){
                     $("#invalid_password").removeClass('display_view');
-                    $("#invalid_password").html("Bạn nhập chưa nhập mật khẩu. Mời nhập lại");
+                    $("#invalid_password").html("Không được để trống");
                 }
 
             }else {
@@ -28,16 +28,39 @@ function initEvents() {
             alert('login' + e.message);
         }
     });
+
+    $(document).on('click','#username',function (e) {
+        try {
+            e.preventDefault();
+            $("input").keypress(function(){
+                $("#invalid_username").addClass('display_view');
+            });
+
+        } catch (e) {
+            alert('nhập email' + e.message);
+        }
+    });
+
+    $(document).on('click','#password',function (e) {
+        try {
+            e.preventDefault();
+            $("input").keypress(function(){
+                $("#invalid_password").addClass('display_view');
+            });
+        } catch (e) {
+            alert('login' + e.message);
+        }
+    });
 }
 
 function login() {
     try {
         var data = {};
-        var username   =  $('#username').val();
-        var password   =  $('#password').val();
+        // var username   =
+        // var password   =
 
-        data.username = username;
-        data.password = password;
+        data.username = $('#username').val();
+        data.password = $('#password').val();
 
         $.ajax({
             type: 'POST',
