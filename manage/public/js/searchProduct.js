@@ -165,7 +165,7 @@ function initEvents() {
             if(sessionStorage.getItem("id") != null){
                 removeSessionUpdate();
             }else{
-                setSessionUpdate()
+                setSessionUpdate();
             }
 
             var id = $(this).attr('proID');
@@ -181,8 +181,8 @@ function initEvents() {
         }
     });
 
-    $(document).on('keypress','.main-content', function (e) {
-        if(e.which === 13){
+    $(document).on('keydown','.main-content', function (e) {
+        if((e.which || e.keyCode) === 13){
             removeSessionSearch();
             window.location.reload();
         }
