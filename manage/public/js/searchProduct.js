@@ -12,8 +12,6 @@ function init() {
         $('#product_id_search').focus();
 
     });
-
-
 }
 
 var _search = 0;
