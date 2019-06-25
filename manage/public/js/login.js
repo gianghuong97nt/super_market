@@ -34,10 +34,11 @@ function initEvents() {
             e.preventDefault();
             $("input").keypress(function(){
                 $("#invalid_username").addClass('display_view');
+                $("#checkLogin").addClass('display_view');
             });
 
         } catch (e) {
-            alert('nhập email' + e.message);
+            alert('username' + e.message);
         }
     });
 
@@ -46,9 +47,10 @@ function initEvents() {
             e.preventDefault();
             $("input").keypress(function(){
                 $("#invalid_password").addClass('display_view');
+                $("#checkLogin").addClass('display_view');
             });
         } catch (e) {
-            alert('login' + e.message);
+            alert('password' + e.message);
         }
     });
 }
@@ -56,8 +58,6 @@ function initEvents() {
 function login() {
     try {
         var data = {};
-        // var username   =
-        // var password   =
 
         data.username = $('#username').val();
         data.password = $('#password').val();

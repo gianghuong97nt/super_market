@@ -82,7 +82,9 @@ function validate() {
             result = _fail;
         }
         if($('#category').val() == 0){
+            $("#div_category").removeClass('display_view');
             $("#invalid_category").removeClass('display_view');
+
             $("#invalid_category").html("Không được bỏ trống");
             result = _fail;
         }
