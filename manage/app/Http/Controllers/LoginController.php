@@ -19,12 +19,6 @@ class LoginController extends Controller
      */
 
     public function checkLogin(Request $request){
-        //validate dữ liệu đăng nhập
-//        $this->validate($request, array(
-//            'username' => 'required|username',
-//            'password' => 'required|min:6',
-//        ));
-
         $params = $request->all();
 
         $get_user = Dao::call_stored_procedure('[SPC_USERS_ACT01]',$params);
