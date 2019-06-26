@@ -47,7 +47,7 @@
     font-size: 30px;
 }
 .btn-2 {
-    width: 48%;
+    width: 85px;
 }
 
 .btn-btn {
@@ -152,56 +152,69 @@
     /*}*/
 /*}*/
 
-/*@media only screen and (min-width: 321px) and (max-width: 767px) {*/
-    /*.label-info {*/
-        /*margin-left: -20px;*/
-        /*margin-bottom: 3px;*/
-    /*}*/
-    /*.row input {*/
-        /*font-size: 15px;*/
-    /*}*/
-    /*.row select {*/
-        /*font-size: 15px;*/
-    /*}*/
-    /*.btn-2 {*/
-        /*font-size: 14px;*/
-    /*}*/
-    /*#product_id_update {*/
-        /*width: 40%;*/
-    /*}*/
-    /*#product_name_update {*/
-        /*width: 100%;*/
-    /*}*/
-    /*#category_update {*/
-        /*width: 100%;*/
-    /*}*/
-    /*#supplier {*/
-        /*width: 100%;*/
-    /*}*/
-    /*#brand {*/
-        /*width: 80%;*/
-    /*}*/
+@media only screen and (min-width: 321px) and (max-width: 767px) {
+    .label-info {
+        margin-left: 5px;
+        margin-bottom: 3px;
+        width: 195px;
+    }
+    .row input {
+        margin-left: 5px;
+        font-size: 15px;
+    }
+    .row select {
+        margin-left: 5px;
+        font-size: 15px;
+    }
 
-    /*#color {*/
-        /*width: 80%;*/
-    /*}*/
-    /*#size {*/
-        /*width: 80%;*/
-    /*}*/
+    .row textarea {
+        margin-left: 5px;
+    }
+    .btn-2 {
+        font-size: 14px;
+        width: 70px;
+        float: right;
+    }
 
-    /*#quantity {*/
-        /*width: 30%;*/
-    /*}*/
-    /*#price_sale {*/
-        /*width: 60%;*/
-    /*}*/
-    /*#price_core {*/
-        /*width: 60%;*/
-    /*}*/
-    /*#note {*/
-        /*width: 100%;*/
-    /*}*/
-/*}*/
+    .btn-back {
+        margin-right: 5px;
+    }
+    #product_id_update {
+        width: 80px;
+    }
+    #product_name_update {
+        width: 195px;
+    }
+    #category_update {
+        width: 195px;
+    }
+    #supplier_update {
+        width: 195px;
+    }
+    #brand_update {
+        width: 195px;
+    }
+
+    #color_update {
+        width: 140px;
+    }
+    #size_update {
+        width: 140px;
+    }
+
+    #quantity_update {
+        width: 60px;
+    }
+    #price_sale_update {
+        width: 110px;
+    }
+    #price_core_update {
+        width: 110px;
+    }
+    #note_update {
+        width: 195px; !important;
+    }
+}
 
 /*@media only screen and (min-width: 768px) and (max-width: 991px) {*/
     /*.row input {*/

@@ -59,7 +59,7 @@
     margin-bottom: -25px;
 }
 .btn-2 {
-    width: 48%;
+    width: 85px;
 }
 
 #product_id {
@@ -151,17 +151,27 @@
 
 @media only screen and (min-width: 321px) and (max-width: 767px) {
     .label-info {
-        margin-left: -20px;
+        /*margin-left: -40px;*/
+        margin-left: 5px;
         margin-bottom: 3px;
     }
     .row input {
         font-size: 15px;
+        margin-left: 5px;
     }
     .row select {
         font-size: 15px;
+        margin-left: 5px;
+    }
+
+    .row textarea {
+        margin-left: 5px;
     }
     .btn-2 {
         font-size: 14px;
+        width: 70px;
+        margin-left: 5px;
+        float: right;
     }
     #product_id {
         width: 40%;
@@ -209,6 +219,11 @@
     }
     .btn-2 {
         font-size: 16px;
+        width: 70px;
+        float: right;
+    }
+    .btn-back {
+        margin-right: 5px;
     }
     #product_id {
         width: 30%;

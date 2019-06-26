@@ -57,6 +57,7 @@ th {
 }
 .tbl_note {
     width: 100px;
+    min-width: 100px;
 }
 
 .tbl_action {
@@ -66,6 +67,12 @@ th {
 }
 .quantity, .price_sale, .price_core, .id{
     text-align: center;
+}
+
+@media only screen and (min-width: 331px){
+    .tbl_action {
+        width: 100px !important;
+    }
 }
 
 
