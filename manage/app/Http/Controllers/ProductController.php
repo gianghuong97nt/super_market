@@ -45,26 +45,6 @@ class ProductController extends Controller
                 var_dump($e->getMessage());
             }
         }
-
-    }
-
-    //phan trang cho san pham
-    public function load(Request $request){
-        if(!session('users')){
-            return redirect('/login');
-        }else{
-            try {
-                $params = $request->json()->all();
-                $product = Dao::call_stored_procedure('SPC_PRODUCT_FND01',$params);
-
-                return view('product.search')
-                    -> with('products', $product[0])
-                    -> with('paging', $product[1][0]);
-            } catch (\Exception $e) {
-                var_dump($e->getMessage());
-            }
-        }
-
     }
 
     //sua san pham

@@ -3,7 +3,7 @@
     <title>Sản phẩm</title>
 @endsection
 @section('link')
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    {{--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">--}}
     <link href="{{asset('asset/css/table_product.css')}}" rel='stylesheet' type='text/css' />
     <link href="{{asset('asset/css/form_search_pro.css')}}" rel='stylesheet' type='text/css' />
 @endsection
@@ -25,7 +25,10 @@
             {{--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">--}}
             <div class="form-grids row widget-shadow" id="condition_search">
                 <div class="condition">
-                    <p style="color: white">Điều kiện tìm kiếm</p>
+                    <p style="color: white">Điều kiện tìm kiếm
+                    <span><i class="fa fa-chevron-down display_view" id="down"></i></span>
+                    <span><i class="fa fa-chevron-up display_view" id="up"></i></span>
+                    </p>
                 </div>
                 <div class="form-body">
                     <div class="row">

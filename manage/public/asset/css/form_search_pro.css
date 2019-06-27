@@ -86,6 +86,23 @@
     width: 50%;
 }
 
+.condition span {
+    float: right;
+    margin-right: 10px;
+}
+
+.condition p {
+    cursor: pointer;
+}
+
+.down-up {
+    display: none;
+}
+
+.display_view{
+    display: none;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 480px){
     .label-info {
         margin-bottom: 3px;

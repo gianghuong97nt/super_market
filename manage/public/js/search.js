@@ -21,6 +21,38 @@ function inti() {
         }
         count ++;
     });
+
+    $(document).on('click', '#btn_logout', function () {
+        try {
+            removeSessionSearch();
+            window.location.href = '/logout';
+        } catch (e) {
+            alert('remove row ' + e.message);
+        }
+    });
+
+    $(document).on('click', '#list_product', function () {
+        try {
+            window.location.href = '/product';
+        } catch (e) {
+            alert('remove row ' + e.message);
+        }
+    });
+    $(document).on('click', '#info', function () {
+        try {
+            window.location.href = '/personalInfo';
+        } catch (e) {
+            alert('remove row ' + e.message);
+        }
+    });
+
+    $(document).on('click', '#personalInfo', function () {
+        try {
+            window.location.href = '/personalInfo';
+        } catch (e) {
+            alert('remove row ' + e.message);
+        }
+    });
 }
 
 function search() {
@@ -39,17 +71,14 @@ function search() {
 
             success: function (res) {
                 switch (res['status']) {
-                    // Success
                     case 'product':
-                        window.location.href = 'http://localhost:8005/product' ;
+                        window.location.href = '/product' ;
                         break;
-                    // Data Validate
                     case 'personalInfo':
-                        window.location.href = 'http://localhost:8005/personalInfo' ;
+                        window.location.href = '/personalInfo' ;
                         break;
-                    // SQL + PHP Exception
                     case 'product/detail':
-                        window.location.href = 'http://localhost:8005/product/detail' ;
+                        window.location.href = '/product/detail' ;
                         break;
                     case 'NG':
                         window.location.reload();

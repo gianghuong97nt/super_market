@@ -76,3 +76,15 @@ function callWaiting(){
 function closeWaiting(){
 	
 }
+
+function removeSessionSearch() {
+	sessionStorage.removeItem('product_id');
+	sessionStorage.removeItem('category_search');
+	sessionStorage.removeItem('product_name_search');
+	sessionStorage.removeItem('supplier_search');
+	sessionStorage.removeItem('brand_search');
+	sessionStorage.removeItem('size_search');
+	sessionStorage.removeItem('color_search');
+	sessionStorage.removeItem('page_size');
+	sessionStorage.removeItem('page');
+}

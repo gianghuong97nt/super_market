@@ -33,6 +33,14 @@ function initEvents() {
         }
     });
 
+    $(document).on('click','.btn-back',function (e) {
+        try {
+            window.location.href = '/product';
+        } catch (e) {
+            alert('Detail' + e.message);
+        }
+    });
+
     $(document).on('click','#product_name',function (e) {
         try {
             e.preventDefault();

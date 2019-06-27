@@ -41,8 +41,12 @@ class UserController extends Controller
             try {
                 $param = $request->all();
                 $request->session()->forget('avatar');
+                $request->session()->forget('users');
                 $data = Dao::call_stored_procedure('[SPC_USERS_ACT02]', $param);
 
+                session([
+                    'users'=>$data[1][0]['user_name'],
+                ]);
                 if($data[1][0]['avata'] != ''){
                     session([
                         'avatar'=>$data[1][0]['avata'],

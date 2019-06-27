@@ -16,12 +16,10 @@
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 btn-btn d-inline">
                 <button type="button" class="btn btn-success btn-2" id="btn-update">Update</button>
-                {{--//href="{{url('/product')}}"--}}
                 <a><button type="button" class="btn btn-success btn-2 btn-back" id="btn-back-edit">Back</button></a>
             </div>
         </div>
         <div class="form-grids row widget-shadow" >
-            {{--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">--}}
             <div>
                 <div class="form-body">
                     <div class="row">

@@ -17,7 +17,8 @@
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 btn-btn d-inline">
                 <button type="button" class="btn btn-success btn-2" id="btn-detail">Save</button>
-                <a href="{{'http://localhost:8005/product'}}"><button type="button" class="btn btn-success btn-2 btn-back">Back</button></a>
+                <a><button type="button" class="btn btn-success btn-2 btn-back">Back</button></a>
+{{--                <a href="{{'http://localhost:8005/product'}}"><button type="button" class="btn btn-success btn-2 btn-back">Back</button></a>--}}
             </div>
         </div>
         <div class="form-grids row widget-shadow" >

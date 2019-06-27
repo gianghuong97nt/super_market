@@ -10,19 +10,20 @@ $(document).ready(function () {
 function init() {
     $(document).ready(function(){
         $('#product_id_search').focus();
-
+        $('#down').removeClass('display_view');
     });
 }
 
 var _search = 0;
 var _page = 0;
 var _page_size = 5;
+var _count = 1;
 
 function back() {
     if(sessionStorage.getItem("product_id") != null){
         getSessionSearch();
         var page = sessionStorage.getItem("page");
-        loadProduct(page);
+        searchProduct(page);
         // removeSessionSearch();
     }
 }
@@ -50,17 +51,7 @@ function getSessionSearch() {
     $('#page_size').val(sessionStorage.getItem("page_size"));
 }
 
-function removeSessionSearch() {
-    sessionStorage.removeItem('product_id');
-    sessionStorage.removeItem('category_search');
-    sessionStorage.removeItem('product_name_search');
-    sessionStorage.removeItem('supplier_search');
-    sessionStorage.removeItem('brand_search');
-    sessionStorage.removeItem('size_search');
-    sessionStorage.removeItem('color_search');
-    sessionStorage.removeItem('page_size');
-    sessionStorage.removeItem('page');
-}
+
 
 function initEvents() {
     $(document).on('click','#btn-search',function (e) {
@@ -72,7 +63,7 @@ function initEvents() {
             }else{
                 setSessionSearch();
             }
-            searchProduct();
+            searchProduct(1);
         } catch (e) {
             alert('searchProduct' + e.message);
         }
@@ -86,7 +77,7 @@ function initEvents() {
 
             sessionStorage.setItem("page",_page);
 
-            loadProduct(page);
+            searchProduct(page);
         } catch (e) {
             alert('.pagination li' + e.message);
         }
@@ -112,7 +103,7 @@ function initEvents() {
             _page_size = $(this).val();
             sessionStorage.setItem("page_size",_page_size);
             if(_search != 0){
-                searchProduct();
+                searchProduct(1);
             }
         } catch (e) {
             alert('remove row ' + e.message);
@@ -136,26 +127,38 @@ function initEvents() {
             }else{
                 setSessionSearch();
             }
-            searchProduct();
+            searchProduct(1);
         }
     });
 
-    // $(document).on('keydown','.main-content', function (e) {
-    //     if((e.which || e.keyCode) === 13){
-    //         removeSessionSearch();
-    //         window.location.reload();
-    //     }
-    // });
-}
+    $(document).on('click', '.condition p', function () {
+        try {
+            if (_count % 2 != 0){
+                $('.form-body').toggleClass('down-up');
+                $('#up').removeClass('display_view');
+                $('#down').addClass('display_view');
+            } else{
+                $('.form-body').toggleClass('down-up');
+                $('#down').removeClass('display_view');
+                $('#up').addClass('display_view');
+            }
 
+        } catch (e) {
+            alert('remove row ' + e.message);
+        }
+        _count ++;
+    });
+
+
+}
 // Tìm kiếm theo điều kiện search
-function searchProduct() {
+function searchProduct(page) {
     try {
         var data = {};
         var page_size   =  $('#page_size').val();
 
         data.page_size  = page_size;
-        data.page       = 1;
+        data.page       = page;
         data.id         = $('#product_id_search').val();
         data.category   = $('#category_search').val();
         data.name       = $('#product_name_search').val();
@@ -185,89 +188,7 @@ function searchProduct() {
 
 }
 
-//Phan trang
 
-function loadProduct(page) {
-    try {
-        var data = {};
-        var page_size   =  $('#page_size').val();
-
-
-
-        data.page_size  = page_size;
-        data.page       = page;
-        data.id         =  $('#product_id_search').val();
-        data.category   =  $('#category_search').val();
-        data.name       = $('#product_name_search').val();
-        data.supplier   = $('#supplier_search').val();
-        data.brand      = $('#brand_search').val();
-        data.size       = $('#size_search').val();
-        data.color      = $('#color_search').val();
-
-
-        $.ajax({
-            type: 'POST',
-            url: '/product/load',
-            dataType: 'html',  //html
-            loading: true,
-            data: JSON.stringify(data),
-
-            success: function (res) {
-                $('#table-result').empty();
-                $('#table-result').append(res);
-                $('#page_size').val(page_size);
-
-            },
-            // Ajax error
-            error: function (res) {
-            }
-
-        });
-    } catch (e) {
-        alert('pagination' + e.message);
-    }
-
-}
-
-function loadProductAfterDelete() {
-    try {
-        var data = {};
-        var page_size   =  $('#page_size').val();
-
-
-        data.page_size  = page_size;
-        data.page       = _page;
-        data.id         = $('#product_id_search').val();
-        data.category   = $('#category_search').val();
-        data.name       = $('#product_name_search').val();
-        data.supplier   = $('#supplier_search').val();
-        data.brand      = $('#brand_search').val();
-        data.size       = $('#size_search').val();
-        data.color      = $('#color_search').val();
-
-
-        $.ajax({
-            type: 'POST',
-            url: '/product/load',
-            dataType: 'html',  //html
-            loading: true,
-            data: JSON.stringify(data),
-
-            success: function (res) {
-                $('#table-result').empty();
-                $('#table-result').append(res);
-
-            },
-            // Ajax error
-            error: function (res) {
-            }
-
-        });
-    } catch (e) {
-        alert('pagination' + e.message);
-    }
-
-}
 
 function deleteProduct(product_id) {
     try {
@@ -288,7 +209,7 @@ function deleteProduct(product_id) {
                         $.dialogComplete({
                             contents: JSMESSAGE.delete_complete,
                             callback: function () {
-                                loadProductAfterDelete();
+                                searchProduct(_page);
                             }
                         });
                         break;
