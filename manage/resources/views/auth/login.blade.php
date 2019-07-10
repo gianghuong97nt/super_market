@@ -20,17 +20,23 @@
         <div class="form-content">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" required="required"/>
+                <input type="text" id="username" name="username" required="required" value="<?php if(isset($_COOKIE['username'])){
+                    echo($_COOKIE['username']);
+                } ?>"/>
                 <span class="error display_view" id="invalid_username"></span>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required="required"/>
+                <input type="password" id="password" name="password" required="required" value="<?php if(isset($_COOKIE['password'])){
+                    echo($_COOKIE['password']);
+                } ?>"/>
                 <span class="error display_view" id="invalid_password"></span>
             </div>
             <div class="form-group">
                 <label class="form-remember">
-                    <input type="checkbox"/>Remember Me
+                    <input type="checkbox" <?php if(isset($_COOKIE['password'])){
+                        echo 'checked';
+                    } ?>  id="remember_me"/>Remember Me
                 </label><a class="form-recovery" href="#">Forgot Password?</a>
             </div>
             <div class="form-group">

@@ -61,6 +61,7 @@ function login() {
 
         data.username = $('#username').val();
         data.password = $('#password').val();
+        data.remember_me = $('#remember_me').is(":checked");
 
         $.ajax({
             type: 'POST',

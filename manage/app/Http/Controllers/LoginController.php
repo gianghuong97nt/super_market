@@ -20,6 +20,7 @@ class LoginController extends Controller
 
     public function checkLogin(Request $request){
         $params = $request->all();
+        unset($params['remember_me']);
 
         $get_user = Dao::call_stored_procedure('[SPC_USERS_ACT01]',$params);
 
@@ -33,7 +34,21 @@ class LoginController extends Controller
 
 
         if((isset($get_user[1][0]['result'])?$get_user[1][0]['result']:'') == 'ok'){
-
+            try{
+                $remember_me=$request->remember_me;
+                $year = time() + 31536000;
+                if ($remember_me=='true') {
+                    setcookie('remember_me',$remember_me,$year);
+                    setcookie('username',$params['username'],$year);
+                    setcookie('password',$params['password'],$year);
+                }
+                else{
+                    setcookie('remember_me',NULL,$year);
+                    setcookie('username','',$year);
+                    setcookie('password','',$year);
+                }
+            } catch (\Exception $e) {
+            }
             $result = [
                 'status' => '200'
             ];
