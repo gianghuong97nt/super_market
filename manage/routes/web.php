@@ -116,3 +116,7 @@ Route::post('/deleteImage', 'UserController@deleteImage')->name('deleteImage');
 //Tim kiếm theo key
 Route::post('/search', 'SearchController@search')->name('search');
 
+Route::get('/resetPassword', 'ResetPasswordController@index');
+Route::post('/resetPassword', 'ResetPasswordController@reset');
+
+

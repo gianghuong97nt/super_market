@@ -37,7 +37,7 @@
                     <input type="checkbox" <?php if(isset($_COOKIE['password'])){
                         echo 'checked';
                     } ?>  id="remember_me"/>Remember Me
-                </label><a class="form-recovery" href="#">Forgot Password?</a>
+                </label><a class="form-recovery" href="#" id="forgot_password">Forgot Password?</a>
             </div>
             <div class="form-group">
                 <button type="submit" id="login">Log In</button>

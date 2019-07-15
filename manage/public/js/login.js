@@ -53,6 +53,14 @@ function initEvents() {
             alert('password' + e.message);
         }
     });
+
+    $(document).on('click','#forgot_password',function (e) {
+        try {
+            window.location.href = '/resetPassword';
+        } catch (e) {
+            alert('resetPassword' + e.message);
+        }
+    });
 }
 
 function login() {
