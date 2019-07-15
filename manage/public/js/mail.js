@@ -43,7 +43,7 @@ function reset(email) {
             data: data,
             ///
             success: function (res) {
-                switch (res) {
+                switch (res['status']) {
                     case '200':
                         alert('Thanh cong');
                         break;

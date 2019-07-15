@@ -28,11 +28,15 @@ class ResetPasswordController extends Controller
                 $message->to($email)
                     ->subject($title);
             });
-            $status= 200;
+            $result = array(
+                'status' => '200',
+            );
         }else{
-            $status= 201;
+            $result = array(
+                'status' => '201',
+            );
         }
 
-        return response()->json($status);
+        return response()->json($result);
     }
 }
