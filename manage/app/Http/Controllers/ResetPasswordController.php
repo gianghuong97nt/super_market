@@ -14,17 +14,11 @@ class ResetPasswordController extends Controller
     }
 
     public function reset(Request $request){
-//        $data = $request->all();
-////       var_dump($data);
-////
-//
-//        Mail::to($request->mail())->send(new ResetPassword($data));
-//
-//        die();
-//        return response()->json($data);
+        $data = $request->all();
+//      giangtt@ans-asia.com
 
         $title = 'Test';
-        $email = 'giangtt@ans-asia.com';
+        $email =    $request->email;
         $data['content']        =   'Test Content';
         $data['name']    		=   'Name Test';
         $data['password']       =   '12345678';
@@ -38,7 +32,7 @@ class ResetPasswordController extends Controller
         }else{
             $status= 201;
         }
-        dd($status);
-//        return back()->with()
+
+        return response()->json($status);
     }
 }

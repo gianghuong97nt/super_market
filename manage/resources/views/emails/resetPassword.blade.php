@@ -25,7 +25,7 @@
                             <div class="form-group">
                                 <div class="input-group" style="width: 298px">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                    <input id="email" name="email" placeholder="email address" class="form-control"  type="email">
+                                    <input id="email_address" placeholder="email address" class="form-control"  type="email">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -41,5 +41,6 @@
     </div>
 </div>
 <script type="text/javascript" src="{{ asset('js/mail.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/common.js') }}"></script>
 </body>
 </html>
